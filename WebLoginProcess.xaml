@@ -1,0 +1,329 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="WebLoginProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="850.4,3800" sap2010:WorkflowViewState.IdRef="WebLoginProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="42">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Security</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="53">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="WebLoginProcess" sap:VirtualizedContainerService.HintSize="691.2,3735.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Pledge - Roberts Space Industries | Follow the development of Star Citizen and S" sap:VirtualizedContainerService.HintSize="628.8,3612" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="595.2,3385.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="loggedIn" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence sap:VirtualizedContainerService.HintSize="532.8,1283.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Account'" sap:VirtualizedContainerService.HintSize="470.4,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://robertsspaceindustries.com/pledge" DesignTimeRectangle="1546, 137, 60, 37" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Account'" FullSelectorArgument="&lt;webctrl aaname='Account' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Account' tag='SPAN' type='' class='c-platform-label c-platform-label--navigation' check:innerText='ACCOUNT' /&gt;" Guid="bead93e7-6371-4af3-8bb3-bc1bec42e239" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAApCAYAAACFki9MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMcSURBVGhD7VbrShtBGPUdBH8ERa0Rg+KFQLQpxoZIakpgiyWoLBojoUvXJmm0rtmyYZ+h4OO1fZbTuW72MpYm/inMCAfMd5058112Dpr/GQJ+/voNnTE3n1uFzjAEqIQ6wRCgEuoEQ4BKqBMMASqhTjAEqIQ6wRCgEuqELAHLh2h5IcKQ4+HjflK/UUPr1kMwFjbjAP0PE5tc0cL1wEcg/MPAw+XRptDnUTjuwH0Movhh4MO1a1hd5P6lKy536tKH4i0umb2L6hr5vWmhT3+PezjZlDYEbzo8ptPAkvxfCRGH+GQJkI7DewyZcQelSL+HkwEPEgy6uLCvIlR3iH6ZHNTn+ofPnZj+FEWScIHEHtGYYw9Om8q76AfcfnRWZjmmIoBiYCEv7eIE7DSi/M4dtx06yfNQnwwBu2c+M+4367C+UUcfp0WhL1hwaQLfQWU96cfw+oof4K6FLfGicRRtcZB4VR3YnJTHc2yR31MTQNBv7nG7OAGR73MxOVIE7EeXbh3kUW6nEsgL3jYTCSRW3/eYfnRxmNHN57Zx8kXGjskXa+JyDqqvpm0BbhuGPRzTB3kxAWsNOCwwOQxJJC8UfmogR/XPJJDIN78yvSznJGT7EAJKcXnyclMR4HfQavOKZY/yUgIWql0egJRwgcpKojzlHPjvCLCxu0IqSMwd91Y82KwEyP7PQsyBf2yB4K8tEKhbQFSdnBPuu9hhUzYJAog+Jx9OYjYCJv3vduS0nExQNgfkECT9WllJBmKQBHlkCKZ1BPJyidWaGoJR27VrE5viOR5iNmkC5nMbqNzw2AwzERBN+C7KlGUhX6q7PCibA5M1GHouLgVJF/Y5ygViH1uDyTXZxO5ybA2SKujfUPlkDQ5J2yzQnNstsX7lKo2tSvuQ22QIIFip41oOxVkIkP0/6taT5b3eFK8u5kD6Q4ji+z0ssSozH0IEwWMXFUaq4kOI+Dp2A4UlkY8gXyM2XtzGg3tjoSirTkUAQfRYs84AHWEIUAl1giFAJdQJhgCVUCcYAlRCnWAIUAl1giFAJdQJhoCjH0/QF0/4A4gY1sfDvbx/AAAAAElFTkSuQmCC" InformativeScreenshot="746fccafd71f180bf6d7115cdaa89688.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Pledge - Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target DesignTimeRectangle="365, 137, 179, 37" FriendlyName="'Roberts Space'" FullSelectorArgument="&lt;webctrl class='c-platform__title' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='c-platform__title' tag='SPAN' type='' aaname='Roberts Space Industries ' check:innerText='ROBERTS SPACE INDUSTRIES&amp;#xD;&amp;#xA;®' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALcAAAApCAYAAAB3ArisAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAaISURBVHhe7ZltSyNJEMf9DkJeiIMbNqIYPEXxIbJRccnqrly47MVNEGPiBoaNRuOpMZGRfIaD/Xh391nqqnt6ku6Z7pnR417YVOAHTnd1T1fVf/rJKaAf/Sz9kbjpZ+1v6q+//wGCsJGp6ZksEISNkLgJayFxE9ZC4iashcRNWAuJm7AWEjdhLSRuwlpI3IS1kLgJayFxE2+MHGR3a+BedcG9aEH9tAVNtwsdtwaFxZxiS+Im3hQr34YwaByAMxuqWyhB8/EOyquTMhI38XaYQwEPT2ENhZ0tufBw3+dcuxVYmcP6rVMYXJQgI+xJ3MTbYbsBo/MD/nfuuAejmzLkZg/gbDSCsx2sZ38/N2BN2Evi/gD15xGM0HDME34VF0fYgbDJl+Dssg9eYPfswcNlC4p5vz77uau2R7x+F6rFZb/9UhmuQ/U+Xfi4oGvvweC+C5WtBZjeaYXqJLiTq7B/0YOBJ5Xj+CtbYuwBsXYpYoDkjrrg8Xr0/2th0jcys1UF92Yo6n28H0eQndnjSVD65nhQDY1xo4HlzCf8mycR7TrHq4qNX96CDfa8WIZOuF9viOMuQ/6dxl5Cftd0/gia4bH3ayiWVTi8mZSFOdtJipvv+7Xwgb9TthV49Q/x+WEaaOzxPrg/TH99D8fYgsJ88J6Jj5K41QGwjbuzUeNidEtL+LwJlUd80VUVVub9jXtmvgDlKyx7rEEenyMBdJag0BjiINpQYMuGEDf/ygIbiUj7OeYotselaCXODnFKHSzrwZdl9VARJt4uKQasbBPK9+gz7vvW6qGxvT+C75hktifMMn+Dck64bzM6cY9G6n5SiUEkrmzcZfjO8uUegRO2l5i8awn2XfZ3BRYd1UZF50dS3NR65YMKEZuf1So8yP7cVOGQ6UuUsfi791WuRWYfI26G+GLZ12ISJp9Re3C4ZAigVP9icTPk9jF2QVkhfNAIEW+XEAP2LHxo7mPw+dj6E9FpxjpB17eeqLh70GGTyB+YODFuJQaGuDqf2ErYgf33+pgxJu8Sfopl34zOj6S4qfVx4o7Nz9wBND1/ouR77jauiO9wK3Lfg8pGDjK7bfCCPCHpxW1KnBTYSABnc7Dy+x3O3FjGBvs/int6rQYD7HtwWYPi6tL4UBEh1i4pScHM4guGH3Ake5OAfHR964mKG5Odx60Hrgq3Xze5jfIuU1zzFbjF8vq2eWzyu/InOAuOhtA5KUFerM5RdH4kxU2tjxN3Uh5zx114aJUgGxY/uy3BLfCh2CIzYsWdWa7woPGy1OLGgYe4/VaAGck2YiOEE0nALG5rztm2BsskZ0yJcn4pQcXFMwHr86kHZ58K0SujWDtzDDqf2bkhB8ULbDNOjFjKE5Z+H7/viO+aJOvEzfrM8TOJvz1R3mUSdyQ30bEpQsN4Lx7UcGn3+Ni86xZ8XA+2YwE6ISdoJ1TP34nPKhNtxecxuOe+A/eiAfXTBjTdu6R7bk3w+YERDxTsUPKamRtxii3+JfLAm5Ig8NurY/Aee9AsyYE0J2oM7tU3fsNli+1/T/yZTkvETh+D2+BgNov14YMTpw1FXCrjxxUVgAmTuPlsKLYnxV+lclNcXzhzy+WZ/B6U231sM4TKmlyn8yNBO6E2pndGSJtHA8aZm12Wj56lad4UQEn0+gBK/aYSt2g/j4cD5hTO6nzWN9nFUDhPF8SJnS5xEtxXaY/NYIecwCfTBMBJ6FvCLG4EY8i2JyP+kYlyQ1wz+220wRwu4jNOMtGxqVuuCOKaTR2zzo8E7YTqU4tbkDaPYczbklkxS1xhp3xJeMVtCbNZr/HZo7mLbV4ibmQGxTLAmeNsZyHWTouzDl9Y4oKTtAnFLl6APGmhm5vpmQJUh/gR4tZLvi1xIjcO8X3LxIqblY2vTM3izuTZf+wk/9lNAtpMxpYDZ9dfVSc3QSrB1kKt1/mRpB21/kXiTptHDfEHSnGIGd+xvuKem923dhol30mRhIiNuOeOJnIBA4GCesQycV/L0CV87aQPD09ynx4MbtqwLx0wku3iBBhcAUZnOZ4scQXlbEfvuUeXx//xnlv1dbw9CcpT3HMzssVT6PT9/TTnqQ+d+oE4nH2Ayr2U23Ef6h1/KnEzFO2o9dy/4B0S7J47bR7TIImbIOyCxE1YC4mbsBYSN2EtJG7CWkjchLWQuAlrIXET1kLiJqyFxE1YC4mbsBYSN2EtJG7CWkjchLVM7f75EwjCPn7Cv3c5Q1/N1CCzAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <Assign sap:VirtualizedContainerService.HintSize="470.4,71.2" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Boolean">[loggedIn]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                </Assign.Value>
+              </Assign>
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="470.4,840.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                <TryCatch.Try>
+                  <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="a88b9891-fa21-4d05-89f6-a430bb67f10b" DisplayName="CV Screen Scope 'DIV'" sap:VirtualizedContainerService.HintSize="433.6,600" sap2010:WorkflowViewState.IdRef="CVScope_2" SendOnPremData="False" Version="V5">
+                    <p:CVScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Button (52,28,84,26)&quot;]" DesignTimeCacheId="a88b9891-fa21-4d05-89f6-a430bb67f10b" DesignTimeScaleFactor="1.25" DisplayName="CV Element Exists - Button" sap:VirtualizedContainerService.HintSize="400,147.2" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_2" InformativeScreenshot="8bec046dd1ffb8392ba6cda2e03f1e50" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                            <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                              <uc:CvDescriptor Id="f710e3b6-cb57-4d25-8ab3-5b08b920fc90">
+                                <uc:CvDescriptor.Target>
+                                  <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="52, 28, 84, 26" ElementType="Button" />
+                                </uc:CvDescriptor.Target>
+                              </uc:CvDescriptor>
+                            </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                          </p:CvElementExistsWithDescriptor>
+                          <Assign sap:VirtualizedContainerService.HintSize="400,69.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[loggedIn]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </ActivityAction>
+                    </p:CVScope.Body>
+                    <p:CVScope.DesignTimeCacheContainer>
+                      <uc:CvCacheContainer>
+                        <uc:CvCacheContainer.Caches>
+                          <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                            <uc:CVCache DataSent="False" DisplayName="Screen CV Element Exists - But (Main)" Id="a88b9891-fa21-4d05-89f6-a430bb67f10b" InformativeScreenshot="df83bfb7d30b9ca5234a53ef0f4fd665" LogicalPosition="1722, 232" OcrText="Sign Out" Position="1722, 232" ScaleFactor="1.25" ScreenshotGuid="7a24dc08-08c1-497d-85fb-22f5ea08b80a" ServerVersion="1">
+                              <uc:CVCache.CvAnchorRelations>
+                                <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
+                              </uc:CVCache.CvAnchorRelations>
+                              <uc:CVCache.CvUiElements>
+                                <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="4">
+                                  <uc:CvElementInfo Category="Icon" Region="63, 35, 13, 14" />
+                                  <uc:CvElementInfo Category="Button" Region="52, 28, 84, 26" />
+                                </scg:List>
+                              </uc:CVCache.CvUiElements>
+                              <uc:CVCache.OcrTexts>
+                                <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="2">
+                                  <uc:OcrTextInfo Region="78, 36, 25, 13" Text="Sign" />
+                                  <uc:OcrTextInfo Region="105, 36, 21, 11" Text="Out" />
+                                </scg:List>
+                              </uc:CVCache.OcrTexts>
+                            </uc:CVCache>
+                          </scg:List>
+                        </uc:CvCacheContainer.Caches>
+                      </uc:CvCacheContainer>
+                    </p:CVScope.DesignTimeCacheContainer>
+                    <p:CVScope.OCREngine>
+                      <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                        <ActivityFunc.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                        </ActivityFunc.Argument>
+                        <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,32" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_4" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                      </ActivityFunc>
+                    </p:CVScope.OCREngine>
+                    <p:CVScope.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="326124ae-e62a-477f-9bd6-d5da47871a98" InformativeScreenshot="5a5336148ff36c63b8cac354c3e56f8c" Selector="&lt;webctrl class='c-account-sidebar__profile-info-signout' parentid='account-sidebar' tag='DIV' /&gt;" TimeoutMS="5000" WaitForReady="INTERACTIVE" />
+                    </p:CVScope.Target>
+                    <p:CVScope.UseLocalServer>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </p:CVScope.UseLocalServer>
+                  </p:CVScope>
+                </TryCatch.Try>
+                <TryCatch.Catches>
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="436.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ActivityAction x:TypeArguments="s:Exception">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                      </ActivityAction.Argument>
+                    </ActivityAction>
+                  </Catch>
+                </TryCatch.Catches>
+              </TryCatch>
+            </Sequence>
+            <If Condition="[loggedIn]" sap:VirtualizedContainerService.HintSize="532.8,1939.2" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="400,290.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Account'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://robertsspaceindustries.com/pledge" DesignTimeRectangle="1557, 137, 60, 37" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Account'" FullSelectorArgument="&lt;webctrl aaname='Account' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Account' tag='SPAN' type='' class='c-platform-label c-platform-label--navigation' check:innerText='ACCOUNT' /&gt;" Guid="2dcfed60-8243-42a6-8ffb-3c47a8c217f3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAApCAYAAACFki9MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMcSURBVGhD7VZ/axpBEM13EPKHGEiJIeUkxFqS5oK2IZIqlZoabBAxzTWSo6aaGPPDKyf3Rdt+ltf9faduCrEtFHaFB96b2ZnddzOztwTDf1aA7z9+wmQspdLPYDKsADrSJFgBdKRJsALoSJNgBdCRJsEKoCNNghVAR5qEOQGy1T7CKEJEEfoorSXtG8jVuhg8hNxOEN56cNeFPbMJt9XH3TexntoHDeQywr5WRN0fIZwk7Dc9VApZbnfqGFA+aGNL5SR7ql0z3/GJy563T8XadlH5pNJ5VK4oH6C5Lf/rIeNQzAgQBxkOA+Y8qOWVfXnPw5gGmdzD/3SKVlvgqIgVYpcbjcJrnEkbRfllIjbZ+FWX8Z0v99w/6mGfCv1EASg6e9IvKYCDwpHI7fX5noN+vCe2H75uWoC1Knzm7KH0tsuTXFSRFvZCmycdHu/EaxQ2UfnKN3B+4Mzbn9fRY7FJVcmKSTsoX/KY5+WNhQSIJh62WYUlBYjXPhZTYkqA5X1x6MsaVnINDFkSkoDZ4wM2X8VrYhTRYqXdR1kdMIHd0zh2gs++HzF+/JGI+lQBRCuNW7QV/oIAWye87Nlm1IECNArU/kgChTfo0ESynGftpH3Ypv3qtADJwz1RgF6rzf3ZS/ljAXZQv+UBzl7TEnaw7/NEfA78fwL4hw6pIG6jPd4bUn5RAWT/68DmgGyB8N+1gJwTYRuFx3zIc1KAVIa8uBv+zLGgAKr/ybWkprecoGIOyCF499shSAbaARlos3Z5uIgMwVXJJ4cgrTop4gjvctJnA6WLpM+MANQn3xTzimJBAdSE/xBfEam0i2bAg9I5oK5BUgWDz0IkiqqLZeIvS3X2mmyUNkks2UIE9z10CK+uwYC0jUPzZeF6wkdcpcpn0keF+WgEIMgd8ypZUADZ/yPU89MOhVbye2D+Q4iKMfYOeVlrPoSiSUhEFRUz9yFE1l52UdmND5JapT7XGIcJnytSlQfx94hOgFSGvKwHyi86AwyFFUBHmgQrgI40CVYAHWkSrAA60iRYAXSkSbAC6EiTYAVYf+HCXLj4BRMRonI79VU/AAAAAElFTkSuQmCC" InformativeScreenshot="e88d90006eec877ae7e26271707c30fd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Pledge - Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="376, 137, 179, 37" FriendlyName="'Roberts Space'" FullSelectorArgument="&lt;webctrl class='c-platform__title' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='c-platform__title' tag='SPAN' type='' aaname='Roberts Space Industries ' check:innerText='ROBERTS SPACE INDUSTRIES&amp;#xD;&amp;#xA;®' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="400,1483.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="username" />
+                    <Variable x:TypeArguments="ss:SecureString" Name="password" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:GetRobotCredential AssetName="sc_main_account" CacheStrategy="None" DisplayName="Get Credential" FolderPath="galacticmerchantofficial@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="337.6,409.6" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[username]">
+                    <ui:GetRobotCredential.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:GetRobotCredential.TimeoutMS>
+                  </ui:GetRobotCredential>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="337.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Text="[username]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://robertsspaceindustries.com/" DesignTimeRectangle="1536, 507, 326, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT email'" FullSelectorArgument="&lt;webctrl id='email' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='text' class='c-form__input' aaname='Email' /&gt;" Guid="ee5bd619-5948-468b-8f40-d24058045e52" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUoAAAAyCAYAAAA6L5IdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEYSURBVHhe7dcxSsRQFEBRNzMoiIiiRUSnsRC34BrcgKuPiYUzIZHbm1Oc5vN+e3nv4nA3jAD8TSgBwkYon8bD/WT1DvDP/bRv3b9FKC8fXsbr4XW8Pb4D7NLcwLmF5238DeXV43G8eX7b/AiwJ3ML5yauQmmTBDiZm7gM5XSX2yYBTuYmLkM52RoE2DOhBAhCCRCEEiAIJUAQSoAglABBKAGCUAIEoQQIQgkQhBIgCCVAEEqAIJQAQSgBglACBKEECEIJEIQSIAglQBBKgCCUAEEoAYJQAgShBAhCCRCEEiAIJUAQSoAglABBKAGCUAIEoQQIQgkQhBIgCCVAEEqAIJQAQSgBglAChFUoPz6/ADizCiUAW4bxG4qy1LI74/szAAAAAElFTkSuQmCC" InformativeScreenshot="568d6897f013dc7afca37e85e68f5988.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="1536, 477, 326, 20" ElementType="Text" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='c-form__label' aaname='Email' check:innerText='Email' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUoAAAAYCAYAAACcGLRNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGrSURBVHhe7do/SwJhHMDx3oxzBC7iK3C5piAamoNAmpxcXDLoBCGQSIRAbigIhzwwl0ByEeIkxIabXHwbv57QU+/884TV8Qjf4TM8/+62Lw+ee4mDlAAA1iOUAKBBKAFAg1ACgAahBAANQgkAGoQSADRCocy3xvL2uUarHjr470o99d6e5FetAUCMlkMZdxCnrLuhCuNQ7NPpHKEEYAhjQpk4siV/bUsmGBNKAIYwJ5RRhBKAIbYIZU3uvZGKmNob8HxpdHx5HSzMvffFvjicn7vqhs8MRuK6D3Kcnq5Hw0goARhii1DWxVGhc0rB+ETOHn0Vtb4Uguilc1Joq2d1mmKFzs4lz5vSUM9p1HKTOUIJwFDLoVy89c34UskG+6KhVLIv0g7tScl+ua/ObQpdUSq9sbSd4mRMKAEY6g9ulMqKUEZDl7nsivsRDTChBGC+mEJ5I1VPRfHpVpLBOjdKADsiplCuOEMoAeyIeG+UzzWxZh98bKkSSgA74Icfc5RZQH/xG+Xi34e+eb44Zb56AzBbKJQAgGWEEgA0CCUAaBBKANAglACwUUq+AHwxPAbwQ0nFAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="337.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" SecureText="[password]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://robertsspaceindustries.com/" DesignTimeRectangle="1536, 606, 326, 46" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT password'" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='c-form__input' aaname='Password' /&gt;" Guid="90bff094-be23-45d5-86a7-819ff251bda5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUoAAAAyCAYAAAA6L5IdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJqSURBVHhe7dtBS1RRHMbhvkwQBEULFwZJUERFUG4Uwha5aRZpi3QxubAgKxIEQQiKoFat+ozH3omxO3eunhxdzOCzeBiZ/726+3HuPcdLl2/MFwCOJ5QAFUIJUDESyitzC+Xq/J1y7db9cn3hAcCFkvalgWlhs41HocxAIAH+BrMZy6NQpqJdNwBcRGniWCitJgH+SRPHQtl1IcBFJpQAFUIJUCGUABVCCVAhlAAVQglQIZQAFUIJUCGUABVCCVAhlAAVQglQIZTAzJm7+7gsPl8va9t75fXOQfn8/Xfp734d/Lz8YrPcfLjUed+khBKYGQnkytpWef/l1yCOJ+n1P55bMIUSmAn3llbL9v6PkRj2d7+VxdVXg9mjlV5Zf7s3Mk9QM+/6fachlMDUW+5tjgQwem8+Hc1vP1k5+do/q8vhfBJCCUy1BLEdvu39n4NZVpHNx/Dh6rG9soyzxFIogan1bH1rLHixuvFuMM+jd3uW7xPM9vcxaSyFEphaO8ds2iSgmXfN8n3eWXbNIhtCzb/xP4QSmFp599gVu+H7yfYj9vCR/LiV6KQbO0IJTLWsDtsry7yXzNGfSCzzCJ7PhDUrxvbueJxl91sogamXALZjmQPm7XOSiWQOoTevy33Z9Gled1pCCcyERLDrnGTCmEPo2ahpH0Tf+HBwLofOhRKYKXkUTwCbQWzLPNd13T8JoQRmUlaYee+YjZts7uQzh83P698Wm4QSoEIoASqEEqBCKAEqhBKgQigBKoQSoEIoASqEEqBCKAEqhBKgQigBKoQSoEIoASqEEqBiLJRPX/YBaBgLJQBd5ssh8Q16CpxlWcAAAAAASUVORK5CYII=" InformativeScreenshot="c9e2f4b2849829103d525d42d5776110.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="1536, 576, 326, 20" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' class='c-form__label' check:innerText='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUoAAAAYCAYAAACcGLRNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOTSURBVHhe7do/SyNBGAbw+zLWQbAJKSysbJJCDg5BQQQRRBHhtDDCJYUK5kCRk2AIhJMgBk4FDZiArIhBCEiCiBap0vg1nntndjaZzR83J9h4T/FDdmZ2sjYP7zu7X4aGwyAiov4YlEREARiUREQBGJRERAEYlEREARiUREQBGJRERAF8QRkvvuLupcNTE+XbChJzMd+Nn1n8Sv7vq6Oec0T0//EHZVdAxDA6l0XmXsYrl5iw1n5mDEoisgUEpSv0syrVZR2bUf/4Z8WgJCLbQEE5tFRC+aWBg6WO8U+KQUlEtncF5dqFrLPPMWsN5HeTCJn145sVFB871hS9fRewdt6A8+Sfz++ouX1kaq8o57fMWjF9ikKtiXIh3R6LHCEv95z9mnOvv6ZxcN3w7Xf3UMfBxkL7niXZ58GaL2b1+PhGyT/uYVASkTFYUCYrcPq23pOYyj1LuDwjNa2uk9i7f4VznsZI11oxX0LxpYncj8nuueEYEmV5hptTjJqx0G7dDa5qCbPeunVHnkeCe9m9ni80cfdYRWLG7DkWR+JKxh4czJt7pvISpLUKFiNmDy2FjISkc3WCqDXOipKIbIFBOTIzwMscX8W5itSthI9UbD2DcvoSZxJ8+e1eQRnGt98SaI8VrJjrFVW9SnXqtII4jGhWBXMVcb3G/N6f/dYemg7TdrjroJSwnbLX6GdpIrNujQkGJRHZuoPSbj+Vpyace6nWWp8H9W6d76zWXLXeZTV/X0cmvY+JsfZvePere4rXDjbX4/5A1dWrt9cWDqrSih+XdKtd2FXPEHOf8/YSUX2PWWO360rHcUHPoOxz9sqgJCLbYK23TVdqUoVtWBVhr8AZW8DsTgkFVY3K+rPsVusMUxmZSCGer6KoArVWR2rZBHHkBAUJRX3+aKrPXNJUjRfqnNKcYx57wcigJKKP9e9BqT8V8tpeo0/guGLSTtutcodIEnsV+d3Wyx5zximh6J5P1pGIhDF7LEFXc7Dote765Y/C1puIPta7K8rc9mqrQgx9d94MyujhW0EpQXdjB6U5l5RQ21N/vRZbt+TP2MupoG6fVyoDv8zpDEq+zCGiAfx7UFpnjDanKkGlwyuLXOenQU8NFLzWWwdex/yD1XqLkLXm7DDujkfSyEnLrdffnvpfLA3weVDvoOzzeZA6lz13Px8iIvIFJRERdWNQEhEFYFASEQVgUBIRBWBQEhG9KYy/8m4XzuDHoZAAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://robertsspaceindustries.com/" DesignTimeRectangle="1536, 675, 30, 30" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl id='remember' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='remember' tag='INPUT' type='checkbox' class='c-form__input' aaname='Remember me' /&gt;" Guid="64b1ac62-4995-406f-949e-4e3b312203a7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACtSURBVFhH7ZehDsJAEAX7M+hSWQEBQwIoXNMEiyB4wtcvGUFzfa3dcOKJUb3bmfTUNpuujxpwiDIL2e5OcRkfMTzfMb4+KTAbB67SPYXwgUPH2z26wzXa/TkFZuPAVcZMIVRyYO1yBrhwLkIozPwTCi6cixDeb+1CJjgdUuIQxSGKQxSHKA5RHKI4RHGI4hCl7pBq1olqFqxqVs5fDJUc4v0yYDaOMgJmIf+jjy9BTMfeCXkCMwAAAABJRU5ErkJggg==" InformativeScreenshot="7b1e7c43e06e2134134c4815a1a243b2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="1576, 678, 95, 20" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl aaname='Remember me' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Remember me' tag='LABEL' type='' class='c-form__label' check:innerText='Remember me' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGMAAAAYCAYAAADu3kOXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMQSURBVGhD7ZddSxtBFIb7Z7zyQlSEiAaLKDYgpiAagyndRgllS8haP5ZNY1lhRU0koYQieJGLXORvvj2TncnOrBvjiqGDzMUDs3Nmz5w5786Z2Q8z88sw6IERQyOMGBphxNAII4ZGGDE0woihEUYMjVDE2PYHcOxz5L+G7NdaOL15xFHhk/KS3pzA6QTIJNr0JiZGH9aWOmBm0Ybd7WBT7tOa9yzGfBb5qz5KG/F+XXnXYsT6M2VYNz1Uax6VsgYq1Ha+5flYSsTfBxR5mcsf38JpD+BeBaO+otdD3bUxN/Kfx67fg3vRILsH6ze1T8qYHdoKsDo9VIQ/ms9uDnB53ULpOOzb//mA+lUDq4vCXzyGANUm+ZBK7exOALfZhcV82K1he/cjf3/9HM5dh79fxgJ/R6HUReD7PKYwhssu5aHG1sD6WJwp5uSk3hkL3ymZtkg+oZSxhK+SAvfPytHz/AZ2r6WdtteB/8uW7HkU73sorrE2E6OL7ZGN2ApIDI+LFbJ2NkD1QDwnxLDiwW37WBo+k39KVHFdshcoBo/HQPFe1gqRLYknY7KUuwGOdqQxGQ+nL52Tk/rM2KQv28rJY1hyRfISEsGS559Ez0Sm1odTCttMXOdLVrGvnfVh77F2ghhjBI+Sk2BX/NB67gOsynaWuGYj3AWvEkNdU0iKOTkxMRJuU/SVytstSbCoL70YTxch901DjCS71DcVMSbMyRm/MxYPYbVjW2s4RhUspIrVDLMnTPoCMeoXcX/nWB/W0ymJIZ8pgoPDsPRNS4zn5uQ8X6Z2buFTfY4O22XkGjRGKVMy6cVY+kHtWJmKeCsx6MP6I/xUUSW7UjJkpiLGhDk5E86MLJ0RfTocN0Z9LHnu8bifwPRizBzQAe9WFHvEG4mhHKYFlNqP2F+R7DJTEWPCnJzJB3iGqUoHuLg6rtio0M0gvNqG2y2XE2K9Qgwqh8VAXG359v0sbmuvEYPio4Xbo/ieXjPnCi3UxTVzOEaU2bivMaQWY8KcHEUMw//FiKERRgyNMGJohBFDG5bxD856cbANIzm6AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Sign In'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://robertsspaceindustries.com/" DesignTimeRectangle="1709, 731, 180, 56" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Sign In'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='c-form__submit-button animate' aaname='Sign In' check:innerText='SIGN IN' /&gt;" Guid="0cbcdb14-a061-48b0-8614-5817e015749f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALgAAAA8CAYAAADVEnAJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARtSURBVHhe7dzPSxRhHMfx/hErrC4RRT8uLkTQyYpOQUJBP6CCwKBAg0i6eLFudRCUDkEH6bQQ1UU6SL8kFjyohaz0S2Now1h1GUZUvj3z45mdZ+dZdXefVec7n4EXtDOPz3PYt9OzuuuOfYfbCICTC533wn8jcGBn6wI/kvHprgEYsmmB7820U+uZq7T7fBftuvaQdt5+Si1dzwGaTjZoPvCjx6n17HVqQcywhWSPRgPfc/Ic7ezs1y4IsJlkk8YCbz19RbsQwFaQXRoJfPfF+9pFALaKbLPhwBE3bEeyz4YCR9ywXclG6w4cccN2JjutK3DEDdudbLXmwBE3JIHstabAETckhWx2w4EjbkgS2e2GAkfckDSy3XUDR9yQRLLfNQNH3JBUsuGqgSNuSDLZsTZwvHEKkk62HAvcfcur7gsAkkT2rAZ+9Djezw0saAP3PomjGQyQNNrA8TEz4CIWuPsBYd1AgCSKBe5++l03ECCJYoG7f9pBNxAgiWKBu3+3RDcQIInUwI9kUvBHebLUk5ujgr1CsWN1hRynQM8i43unl7xL81OfI3P489wamaV8SXzNqjdEPZaLlH0Wn4dWbXr7MjpPxOeiP8bK66+H8pT3BhZpKHLe7Bo8xALXDeIkMzJHjv8U03yxSHmrwsx36o2MrxZ4x2gxnIdsOz6PZdHAYHwe7yhZyhohU4G7R8Nr8KAGLugGcTLw239+C5OftNcr6QP/RG8XvNNUmMpRJjK+GiU+ccxP5+LjTAYujsbW4CF1gQ/98Z/f/Kj+eiVt4IM/6Zd7clUE1qeOr0bO4yzYwZ1/iT5UbiMMBW5mDR5SF7i8gzvfxrTXK2kDf2XRvHtyYZZ6ImPXUp5njIasYP9vV2wjDAVuZg0eUhd45v2c/wSLw1mYozfD79bcYmgDryMSZZ5BEeiy91DdRhgL3MQaPKQu8Jau1/To66L6k49lmybGx+mWZrvRlMDF4/KL1Mg2wmTg4nFja/CQwsADfcPUO2pRvuQ/3/6xQr8m1ReNdQWeLW9huoNz8XmG49sIw4E3tgYP6Q08ov3FOL2x/DjcY2KkfK2uwF8GgZescI+unadyG2E8cKHuNXhA4KEsPfnh3+2cmS/heW008kVm8SfdkOeiNhq4oGwjppsQuFDfGjwg8CjN3U0bzdAsFbyzamChGgJ3v7EGfgfbCHkYDry+NXhA4BHdX23vuV/3Dt6Vow/+UHFe88uUmgIX+r7QRLCN8A7jgQs1r8FDygIfpoGpyl+pB/75cbgvNCdGsuHXVIvmsrjb+//ti6O0qM71N5hro4EL0bcQNCVwobY1eEhZ4OU7b+xw32hl25T7qP5cvHo0a7/ZynGWlJ/IrBefso1oUuC1rcFDygKHtEHgwBoCB9YQOLCGwIE1BA6sIXBgDYEDawgcWEPgwBoCB9YQOLCGwIE1BA5s7e98jMCBr2OX7iJw4OnA1Qd06MTpcuAdN7vJpRsMkBQH7/RT27UeEfepMG4v8OgDAF7a6D8gkaNdjOyw9wAAAABJRU5ErkJggg==" InformativeScreenshot="c9e917b4f1e9e0361d5c1b2bc27e3666.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="1715, 748, 168, 28" ElementType="Text" FriendlyName="'Sign In'" FullSelectorArgument="&lt;webctrl class='c-form__submit-button-label' parentid='enlist-root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='c-form__submit-button-label' parentid='enlist-root' tag='DIV' type='' aaname='Sign In' check:innerText='SIGN IN' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKwAAAAgCAYAAACPQ5N7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMPSURBVHhe7Zoxb9pAFID5I5G69Ad0bH5B/0GHDt26ZSNTs7Ggjt1gipQBdUKK2iwoA2rToAgpAyQRMmqbhMgqEZUhlmUE6PXsM+bOPkgwh5Rn3pO+wXfHe8N93LMNmZevXsOLdx9hK3tAEM+eDMlKYCKjGiSI5woJS6CChCVQQcISqCBhCVSQsAQqSFgCFSQsgQoSlkBFCoUtw169B11nDLGYjMF1u7AvrM+1h/5Uv3Um5OB5dqodMGz2mYm/RI6RBeX9eB6YOHB8KOYROLP4GtNQz4cYYPgLLSgJ43pr4CR1wm5Xe+DyLYO+ZYFhRrj9DTlh/Txh39asMA84TjyPaUKhGM/jh21KNUJ0CevFyjVwkjphC3d8v7oXp8r5KGphT+F44A9Dt1WHbWH9PCSZWPTb9fg6ncKyWK0GTlInbOkv3y+jpp6PohS2eA033uCECZOX189jmscdOMHJPISTaNvWJKyeGjhJ7Qnr/jpXzkdRCvvVhL43OOjAnrB2EbM851Ayg/tnJ9K2NQmrpwZO0ncP+6PHN4yFO+jBUeX7wpauFDbBpkt5iky4kX8pt21twuqogZPUCbuV/Qafrh7kJ/uRA81GA3YU7X0twrLr2UOb0LZ1CsuuV6uBkxQKG5CvQK5mgmHz/eMxhpsL+SEqkbDl2S3DbjAWz1OJt23Nwq5WAyfpFVbgzZcGHJl8s71oVmdziYQ9DIS1zfAeV5kn2ra1C8tIXAMnGyEspwyf//DTyL29DMeVEkwfuqxr+DAdE3mqsAypbbfXICwjWQ2cbJCwDMXpo5Sg1IGuPyoLE7KEsN4XpXAXtO1paBY2WQ2cbJSwu1eOv5ePnrDZOpzwpWxc8XJ+KWEZ+UtoBm3bD+3CMpaugZOUCVuBQiv6E2rAP77Z3oNXs1oOPzNPgvfsNOZtloX9IOe6D3I9VViG+JPxWoRlLFcDJykTdnYyxsL744vjQP2n/F52vgSL//ziukPpjcNjMklte03CLlcDJ5t1D0ugh4QlUEHCEqggYQlUkLAEKkhYAhUkLIGIA/gPUcQBFAvAMbYAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="bd424292abbfd31885b2af2fd09c4f6a.jpg" Selector="&lt;html app='chrome.exe' title='Pledge - Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" Url="https://robertsspaceindustries.com/pledge" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
