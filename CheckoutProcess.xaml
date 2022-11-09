@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CheckoutProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="850.4,6733.6" sap2010:WorkflowViewState.IdRef="CheckoutProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CheckoutProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="850.4,6598.4" sap2010:WorkflowViewState.IdRef="CheckoutProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -101,19 +101,19 @@
       <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CheckoutProcess" sap:VirtualizedContainerService.HintSize="716.8,6668.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CheckoutProcess" sap:VirtualizedContainerService.HintSize="716.8,6533.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Cart - Roberts Space Industries | Follow the development of Star Citizen and Squ" sap:VirtualizedContainerService.HintSize="654.4,6545.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="048eaed5-368e-45ec-b6c2-a3ef875f088f" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Cart - Roberts Space Industries | Follow the development of Star Citizen and Squ" sap:VirtualizedContainerService.HintSize="654.4,6410.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="048eaed5-368e-45ec-b6c2-a3ef875f088f" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="620.8,6319.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence sap:VirtualizedContainerService.HintSize="620.8,6184" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -202,7 +202,7 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558.4,5408" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558.4,5272.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Default="0" Name="totalPrice" />
               </Sequence.Variables>
@@ -258,7 +258,6 @@
                   <OutArgument x:TypeArguments="x:String" x:Key="p">[totalPrice]</OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="496,95.2" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[totalPrice]" />
               <uix:NClick ClickType="Single" DisplayName="Click 'Add'" sap:VirtualizedContainerService.HintSize="496,167.2" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="048eaed5-368e-45ec-b6c2-a3ef875f088f" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="https://robertsspaceindustries.com/store/pledge/cart" DesignTimeRectangle="1613, 555, 42, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Add'" FullSelectorArgument="&lt;webctrl class='OrderSummary-info-add' idx='2' parentid='root' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl class='OrderSummary-info-add' type='' parentid='root' tag='BUTTON' aaname='Add' check:innerText='ADD' /&gt;" Guid="722331b3-60d8-4a60-bacc-db7f27941949" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAaCAYAAADIUm6MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGXSURBVFhH7ZZpT8JAEIb9R97KVe5ioZwWFBAKcojIEfX/J2PeSbZZSitrNE2J/fCmzc7szDPd2d2enMY0OkZF4EErAg9aEXjQ+h/gt1mdUnqFYrkSncXTzjjeMQabW4mCQeeJzI/8VKQMfp0uUG+yoNnmk55mS7rJFB3bRTJLHXvKNi9hHsBU/eS8flIGz5brNFm9cwI882bTsclA1uCZzHaPVe30aTB/o+n6g/S6RZepnJKfvJp+UgLHEja6Q04oErT6IwaGXYCjIBQoz2v27D3wQ35/Bo62QHvYizUVqi0avqxY6FfYQwsOWATF8l5p+Z0ksIcSHFBoCwQt1u45aK7S4OTt4YTtoQSP5++4LdDfbo1eNzunRajAEQgBvcAxbrQelIECA0citAMSoT1kW8ao8fjjeM6bF0AoBvugYnVZOOawqd3gh/x+DZ4slrkd3BcOJC6k8XLLRQggL6F4nECipbx8IOEn5/HTt+A4QXAdI5jXVxC/ACgCPlrJ3BP2iJiLp4qfig72eFgVgQetCDxoHSm4Rl+1wAmcoiINjgAAAABJRU5ErkJggg==" InformativeScreenshot="79c65207c257a19f3b51c32294bbed94.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cart - Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
