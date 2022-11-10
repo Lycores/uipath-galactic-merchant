@@ -1,0 +1,268 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="BuyPaint" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="paintName" Type="InArgument(x:String)" />
+    <x:Property Name="numIterations" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>852.8,2348</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>BuyPaint_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="50">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="BuyPaint" sap:VirtualizedContainerService.HintSize="708,2283.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Pledge - Roberts Space Industries | Follow the development of Star Citizen and S" sap:VirtualizedContainerService.HintSize="645.6,2160" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c1456705-fa78-414b-a928-537b53b44af0" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="593.6,1933.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="531.2,1810.4" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,1633.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Extras'" sap:VirtualizedContainerService.HintSize="433.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c1456705-fa78-414b-a928-537b53b44af0" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://robertsspaceindustries.com/pledge" DesignTimeRectangle="1185, 769, 67, 61" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Extras'" FullSelectorArgument="&lt;webctrl aaname='Extras' parentid='store-wrapper' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Extras' parentid='store-wrapper' tag='SPAN' type='' class='' check:innerText='EXTRAS' /&gt;" Guid="5845ee43-6ef6-4957-bece-ea39f6fd3e39" ImageBase64="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" InformativeScreenshot="b575b858bd66fd184e60d582249976ab.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Pledge - Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Roberts Space'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="c1456705-fa78-414b-a928-537b53b44af0" Text="[paintName]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://robertsspaceindustries.com/store/pledge/browse/extras/?sort=weight&amp;direction=desc" DesignTimeRectangle="263, 462, 450, 64" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='search' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='search' class='Input__field' aaname='' /&gt;" Guid="c59b223d-2608-4d2c-a60a-c1bbd0a1e610" ImageBase64="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" InformativeScreenshot="1fbb9e8d4a4fafc273965847df43bbe5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Store - Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="365, 199, 179, 37" FriendlyName="'Roberts Space'" FullSelectorArgument="&lt;webctrl class='c-platform__title' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='c-platform__title' tag='SPAN' type='' aaname='Roberts Space Industries ' check:innerText='ROBERTS SPACE INDUSTRIES&amp;#xD;&amp;#xA;®' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Add to cart'" sap:VirtualizedContainerService.HintSize="433.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c1456705-fa78-414b-a928-537b53b44af0" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://robertsspaceindustries.com/store/pledge/browse/extras/?search=SPIRIT+-+CRIMSON+PAINT&amp;sort=weight&amp;direction=desc" DesignTimeRectangle="397, 928, 196, 56" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Add to cart'" FullSelectorArgument="&lt;webctrl aaname='Add to cart' parentid='root' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Add to cart' parentid='root' tag='BUTTON' type='' class='CtaClipper AddToCartWidget CtaWidget' check:innerText='ADD TO CART' /&gt;" Guid="4f9969c0-d903-4568-beee-8b8bd895d697" ImageBase64="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" InformativeScreenshot="4c15a0416faa6763ddf4de1db7f7e9d2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Store - Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="471, 948, 90, 16" ElementType="Text" FriendlyName="'Add to cart'" FullSelectorArgument="&lt;webctrl aaname='Add to cart' parentid='root' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Add to cart' parentid='root' tag='SPAN' type='' class='CtaClipper__text CtaClipper__title' check:innerText='ADD TO CART' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAUCAYAAAAEEYpkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQzSURBVFhH7ZjXi5RBDMB99UWIiAV77+X0rGDvnvX0rGevqCCWFxUVRRTrgwXEgiL4oIK9i7333v6amJ+z487NfYtn4RaXfQge3ySZ5DeZSdYq3+aL5qXyJQ8+S5IHnyXJg8+S/Hfgv8wTvTtN9NJEJ5dNHpaKfk3QDeX1bNGrk9I2980HvpJ0K0PKgf8wV3RNb9Gq1UTHtRN9ND299taCX9jVrcXSs4nokSJnT1JDWibr4fP8hLJJ8/dhs61bM9mmQ33Rc2Zzd6roku7l17FbazE/nZH26YV4Dplv4gttalQXXdZT9J7F6nU5POKoX0u0S0PRCyXpNWLcMaisDy+Lu4nettg40O6Nk3XYb9+wdN7lwBPIiNZOuWVd0RNj09UUgh9uOlM6OpnQXrRJHbfplVQ1AR4ggPZ6o9u6ACZ1EH0WQML/6WLRWZ1FJ5seSbNHn2bObpEldt2q1ScORO/T67MX0OIqTooFG2KNYbyx/MKD3TpQ9JMdHGsh+HB/X2DL7RCJcanZ831AC/e9UwOX74wCxzIRPACOjhRtXFu0tUHHkOqnalj34H0FertXs0RnGrQY/BgDHd6Ym1MczBh8KCS6qV95kD7xGFYmfS9JsWTydc3A9W7qigh/YZyZbE5ZwVCggH8/x32D4/HRzk/IL5Qy4DFc0ctB3zNUtKiNq2yuOOu5Aj5JsMNv7RqiG80fz0fbeqInxzmQmfb/J+BvThbt11y0xMAQ8Lo+rvq5BTjLZfAvLQeeum6Ww0V72+lXvPXr+zpwfn9eAXLdbn/vHGx9ooeL6Y/B4/jAcJfAlgGiH02Z0+bUcQ70XAZPIy1sJDqni8uHWz60letLTE1+f8DHwpt/bFR6798Cz7i1INU4B1pjoEGMtWbE1eMWcBtyFfxns9lmjZTcgU/uEy1GnhDgAREdD54JiqIkD/Y9OKLsvr8FHmDxyOUF+Pst2dcGOFeaKxVKdTNpPLHvxJSUO7LK+h5FF+7PQfgXoZix226F37PC4Alkt71XON1l/4bBnzXAjETzCp1zwJPkSguGNw7Z3N+mAQMagy+wMW+DvZFeb7UFQRX9DXhAhG8slco4+yvwYSzYTu3k8t1rEE+lADJKMlJ6W/LlwAaZPTc+Pvh3qWGEb/DjMLCrMPhnM0VLLRAqHnChwgtbm24zKGtnxjvwcUUgNCISo0n5ZJP0mLnpJUnBIJnAkwzvcFHqN0YszObAif3xhDKlEF9s43/M0UCTDo4+5215TpJuHLwYQXmOr6f2rzB4ujFGt+wpIPFQAScP7OT5VcYvQ5oOXT8UfoZzjdHFho1umL9YDx88S6H/WPCBL3Sf26HH6z7W0C/AgRTrevE+idPbEB9xAvCO5cQMTwXHtsTw478YjMHjVFzhbcUeJvF38uRQYOe5hPLzjc9L5UoefJYkDz5LkgefFRH9DkYAYTlFQHVVAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="fa51cc6f-ce5d-4389-9d9e-e81d718824b3" DisplayName="CV Screen Scope 'BUTTON'" sap:VirtualizedContainerService.HintSize="433.6,555.2" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V5">
+                    <p:CVScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'CHECKOUT' (44,16,60,10)&quot;]" DesignTimeCacheId="fa51cc6f-ce5d-4389-9d9e-e81d718824b3" DesignTimeScaleFactor="1.25" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,196" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="3fe11aa3247a3b8a7641a0fb3b9bdb98" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                            <p:CvClickWithDescriptor.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </p:CvClickWithDescriptor.CursorPosition>
+                            <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                              <uc:CvDescriptor Id="998f2bf3-4014-4603-9fc2-f1816e5934f0">
+                                <uc:CvDescriptor.Target>
+                                  <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="44, 16, 60, 10" ElementType="Text" Text="CHECKOUT" />
+                                </uc:CvDescriptor.Target>
+                              </uc:CvDescriptor>
+                            </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                            <p:CvClickWithDescriptor.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5a5dbe4a-f307-4fb3-85b5-455cda6b9ffe">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </p:CvClickWithDescriptor.Target>
+                          </p:CvClickWithDescriptor>
+                        </Sequence>
+                      </ActivityAction>
+                    </p:CVScope.Body>
+                    <p:CVScope.DesignTimeCacheContainer>
+                      <uc:CvCacheContainer>
+                        <uc:CvCacheContainer.Caches>
+                          <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                            <uc:CVCache DataSent="False" DisplayName="Screen CV Click - 'CHECKOUT' (Main)" Id="fa51cc6f-ce5d-4389-9d9e-e81d718824b3" InformativeScreenshot="4e5b6408a1fd4bb8b0e1477ee9e3800e" LogicalPosition="1359, 488" OcrText="CHECKOUT" Position="1359, 488" ScaleFactor="1.25" ScreenshotGuid="4a4b005e-b9ed-4c71-8139-901a3a69bd60" ServerVersion="1">
+                              <uc:CVCache.CvAnchorRelations>
+                                <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
+                              </uc:CVCache.CvAnchorRelations>
+                              <uc:CVCache.CvUiElements>
+                                <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="4">
+                                  <uc:CvElementInfo Category="Icon" Region="22, 8, 19, 20" />
+                                  <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="0, 0, 128, 42" />
+                                </scg:List>
+                              </uc:CVCache.CvUiElements>
+                              <uc:CVCache.OcrTexts>
+                                <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="1">
+                                  <uc:OcrTextInfo Region="44, 16, 60, 10" Text="CHECKOUT" />
+                                </scg:List>
+                              </uc:CVCache.OcrTexts>
+                            </uc:CVCache>
+                          </scg:List>
+                        </uc:CvCacheContainer.Caches>
+                      </uc:CvCacheContainer>
+                    </p:CVScope.DesignTimeCacheContainer>
+                    <p:CVScope.OCREngine>
+                      <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                        <ActivityFunc.Argument>
+                          <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                        </ActivityFunc.Argument>
+                        <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,32" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                      </ActivityFunc>
+                    </p:CVScope.OCREngine>
+                    <p:CVScope.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9eb8c36b-bbfb-4536-8129-de6fb7fca346" InformativeScreenshot="7cc73fd88d2a138b87e00e8c7f652107" Selector="&lt;webctrl aaname='checkout' parentid='portal-root' tag='BUTTON' /&gt;" WaitForReady="INTERACTIVE">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                      </ui:Target>
+                    </p:CVScope.Target>
+                    <p:CVScope.UseLocalServer>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </p:CVScope.UseLocalServer>
+                  </p:CVScope>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckoutProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="433.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="CheckoutProcess.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[numIterations]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[(Integer.Parse(numIterations) - 1).ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ui:InterruptibleWhile.Body>
+              <ui:InterruptibleWhile.Condition>
+                <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Integer.Parse(numIterations) &gt; 0" />
+              </ui:InterruptibleWhile.Condition>
+            </ui:InterruptibleWhile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="201b06bee651b66032c6e2d0973477fa.jpg" Selector="&lt;html app='chrome.exe' title='Pledge - Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" Url="https://robertsspaceindustries.com/pledge" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
