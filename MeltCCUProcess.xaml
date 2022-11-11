@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="MeltCCUProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="852.8,4301.6" sap2010:WorkflowViewState.IdRef="MeltCCUProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="MeltCCUProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="852.8,3807.2" sap2010:WorkflowViewState.IdRef="MeltCCUProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="41">
       <x:String>System.Activities</x:String>
@@ -101,19 +101,19 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MeltCCUProcess" sap:VirtualizedContainerService.HintSize="737.6,4236.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MeltCCUProcess" sap:VirtualizedContainerService.HintSize="737.6,3742.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: My Hangar - Roberts Space Industries | Follow the development of Star Citizen an" sap:VirtualizedContainerService.HintSize="675.2,4113.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="3763f0a4-38f0-409b-bb9d-efdd7dcb9f0f" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: My Hangar - Roberts Space Industries | Follow the development of Star Citizen an" sap:VirtualizedContainerService.HintSize="675.2,3619.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="3763f0a4-38f0-409b-bb9d-efdd7dcb9f0f" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="641.6,3887.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="641.6,3392.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Default="True" Name="okToContinue" />
               <Variable x:TypeArguments="x:String" Name="username" />
@@ -129,17 +129,11 @@
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:GetRobotCredential.TimeoutMS>
             </ui:GetRobotCredential>
-            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[okToContinue]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="579.2,3312.8" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[okToContinue]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="579.2,2818.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
               <ui:InterruptibleDoWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="544,3136" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="544,2641.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="revealedDate" />
                     <Variable x:TypeArguments="x:String" Name="extractedDate" />
-                    <Variable x:TypeArguments="x:String" Name="month" />
-                    <Variable x:TypeArguments="x:String" Name="day" />
-                    <Variable x:TypeArguments="x:String" Name="year" />
-                    <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="dayNMonth" />
-                    <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="yearExtracted" />
                     <Variable x:TypeArguments="x:String" Name="formatedDate" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
@@ -153,40 +147,16 @@
                     </uix:NGetText.Target>
                   </uix:NGetText>
                   <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="481.6,98.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[extractedDate]" />
-                  <ui:Matches BuilderPattern="(?&lt;=.*\s).*(?=,)" sap:VirtualizedContainerService.HintSize="481.6,69.6" sap2010:WorkflowViewState.IdRef="Matches_2" Input="[extractedDate]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=.*\\s).*(?=,)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=.*\s).*(?=,)" RegexOption="IgnoreCase, Compiled" Result="[dayNMonth]" />
-                  <ui:Matches BuilderPattern="(?&lt;=.*,\s).*" sap:VirtualizedContainerService.HintSize="481.6,69.6" sap2010:WorkflowViewState.IdRef="Matches_3" Input="[extractedDate]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;(?&lt;=.*,\\s).*&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?&lt;=.*,\s).*" RegexOption="IgnoreCase, Compiled" Result="[yearExtracted]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="481.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_2">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[Split(String.Join(" ", dayNMonth).Trim, " ")(0).Trim.Substring(0,3)]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="481.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_3">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[day]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[Split(String.Join(" ", dayNMonth).Trim, " ")(1).Trim]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="481.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_4">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[year]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[String.Join(" ", yearExtracted).Trim]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="481.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_5">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[formatedDate]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[day+"-"+month+"-"+year]</InArgument>
-                    </Assign.Value>
-                  </Assign>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DateFormattingProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="481.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="DateFormattingProcess.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="extractedDate">
+                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="extractedDate" />
+                      </InArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="formatedDate">
+                        <VisualBasicReference x:TypeArguments="x:String" ExpressionText="formatedDate" />
+                      </OutArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CompareItemDateProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="481.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="CompareItemDateProcess.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InOutArgument x:TypeArguments="x:Boolean" x:Key="okToContinue">
