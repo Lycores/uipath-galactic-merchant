@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="WebLoginProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="850.4,3940.8" sap2010:WorkflowViewState.IdRef="WebLoginProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="WebLoginProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="840.8,2690.4" sap2010:WorkflowViewState.IdRef="WebLoginProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
       <x:String>System.Activities</x:String>
@@ -46,7 +46,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="53">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="106">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -99,21 +99,22 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WebLoginProcess" sap:VirtualizedContainerService.HintSize="691.2,3876" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WebLoginProcess" sap:VirtualizedContainerService.HintSize="684,2625.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Pledge - Roberts Space Industries | Follow the development of Star Citizen and S" sap:VirtualizedContainerService.HintSize="628.8,3752.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Pledge - Roberts Space Industries | Follow the development of Star Citizen and S" sap:VirtualizedContainerService.HintSize="621.6,2502.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="595.2,3526.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="544,2276" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="loggedIn" />
             </Sequence.Variables>
@@ -122,122 +123,15 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap:VirtualizedContainerService.HintSize="532.8,1284" sap2010:WorkflowViewState.IdRef="Sequence_4">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <uix:NClick ClickType="Single" DisplayName="Click 'Account'" sap:VirtualizedContainerService.HintSize="470.4,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Version="V3">
-                <uix:NClick.Target>
-                  <uix:TargetAnchorable BrowserURL="https://robertsspaceindustries.com/pledge" DesignTimeRectangle="1546, 137, 60, 37" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Account'" FullSelectorArgument="&lt;webctrl aaname='Account' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Account' tag='SPAN' type='' class='c-platform-label c-platform-label--navigation' check:innerText='ACCOUNT' /&gt;" Guid="bead93e7-6371-4af3-8bb3-bc1bec42e239" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAApCAYAAACFki9MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMcSURBVGhD7VbrShtBGPUdBH8ERa0Rg+KFQLQpxoZIakpgiyWoLBojoUvXJmm0rtmyYZ+h4OO1fZbTuW72MpYm/inMCAfMd5058112Dpr/GQJ+/voNnTE3n1uFzjAEqIQ6wRCgEuoEQ4BKqBMMASqhTjAEqIQ6wRCgEuqELAHLh2h5IcKQ4+HjflK/UUPr1kMwFjbjAP0PE5tc0cL1wEcg/MPAw+XRptDnUTjuwH0Movhh4MO1a1hd5P6lKy536tKH4i0umb2L6hr5vWmhT3+PezjZlDYEbzo8ptPAkvxfCRGH+GQJkI7DewyZcQelSL+HkwEPEgy6uLCvIlR3iH6ZHNTn+ofPnZj+FEWScIHEHtGYYw9Om8q76AfcfnRWZjmmIoBiYCEv7eIE7DSi/M4dtx06yfNQnwwBu2c+M+4367C+UUcfp0WhL1hwaQLfQWU96cfw+oof4K6FLfGicRRtcZB4VR3YnJTHc2yR31MTQNBv7nG7OAGR73MxOVIE7EeXbh3kUW6nEsgL3jYTCSRW3/eYfnRxmNHN57Zx8kXGjskXa+JyDqqvpm0BbhuGPRzTB3kxAWsNOCwwOQxJJC8UfmogR/XPJJDIN78yvSznJGT7EAJKcXnyclMR4HfQavOKZY/yUgIWql0egJRwgcpKojzlHPjvCLCxu0IqSMwd91Y82KwEyP7PQsyBf2yB4K8tEKhbQFSdnBPuu9hhUzYJAog+Jx9OYjYCJv3vduS0nExQNgfkECT9WllJBmKQBHlkCKZ1BPJyidWaGoJR27VrE5viOR5iNmkC5nMbqNzw2AwzERBN+C7KlGUhX6q7PCibA5M1GHouLgVJF/Y5ygViH1uDyTXZxO5ybA2SKujfUPlkDQ5J2yzQnNstsX7lKo2tSvuQ22QIIFip41oOxVkIkP0/6taT5b3eFK8u5kD6Q4ji+z0ssSozH0IEwWMXFUaq4kOI+Dp2A4UlkY8gXyM2XtzGg3tjoSirTkUAQfRYs84AHWEIUAl1giFAJdQJhgCVUCcYAlRCnWAIUAl1giFAJdQJhoCjH0/QF0/4A4gY1sfDvbx/AAAAAElFTkSuQmCC" InformativeScreenshot="746fccafd71f180bf6d7115cdaa89688.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Pledge - Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
-                    <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                        <uix:Target DesignTimeRectangle="365, 137, 179, 37" FriendlyName="'Roberts Space'" FullSelectorArgument="&lt;webctrl class='c-platform__title' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='c-platform__title' tag='SPAN' type='' aaname='Roberts Space Industries ' check:innerText='ROBERTS SPACE INDUSTRIES&amp;#xD;&amp;#xA;®' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
-                      </scg:List>
-                    </uix:TargetAnchorable.Anchors>
-                  </uix:TargetAnchorable>
-                </uix:NClick.Target>
-              </uix:NClick>
-              <Assign sap:VirtualizedContainerService.HintSize="470.4,71.2" sap2010:WorkflowViewState.IdRef="Assign_1">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:Boolean">[loggedIn]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                </Assign.Value>
-              </Assign>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="470.4,840.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
-                <TryCatch.Try>
-                  <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="a88b9891-fa21-4d05-89f6-a430bb67f10b" DisplayName="CV Screen Scope 'DIV'" sap:VirtualizedContainerService.HintSize="433.6,600" sap2010:WorkflowViewState.IdRef="CVScope_2" SendOnPremData="False" Version="V5">
-                    <p:CVScope.Body>
-                      <ActivityAction x:TypeArguments="x:Object">
-                        <ActivityAction.Argument>
-                          <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
-                        </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                          <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Button (52,28,84,26)&quot;]" DesignTimeCacheId="a88b9891-fa21-4d05-89f6-a430bb67f10b" DesignTimeScaleFactor="1.25" DisplayName="CV Element Exists - Button" sap:VirtualizedContainerService.HintSize="400,147.2" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_2" InformativeScreenshot="8bec046dd1ffb8392ba6cda2e03f1e50" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
-                            <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
-                              <uc:CvDescriptor Id="f710e3b6-cb57-4d25-8ab3-5b08b920fc90">
-                                <uc:CvDescriptor.Target>
-                                  <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="52, 28, 84, 26" ElementType="Button" />
-                                </uc:CvDescriptor.Target>
-                              </uc:CvDescriptor>
-                            </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
-                          </p:CvElementExistsWithDescriptor>
-                          <Assign sap:VirtualizedContainerService.HintSize="400,69.6" sap2010:WorkflowViewState.IdRef="Assign_2">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="x:Boolean">[loggedIn]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                            </Assign.Value>
-                          </Assign>
-                        </Sequence>
-                      </ActivityAction>
-                    </p:CVScope.Body>
-                    <p:CVScope.DesignTimeCache>
-                      <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
-                    </p:CVScope.DesignTimeCache>
-                    <p:CVScope.DesignTimeCacheContainer>
-                      <uc:CvCacheContainer>
-                        <uc:CvCacheContainer.Caches>
-                          <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
-                            <uc:CVCache DataSent="False" DisplayName="Screen CV Element Exists - But (Main)" Id="a88b9891-fa21-4d05-89f6-a430bb67f10b" InformativeScreenshot="df83bfb7d30b9ca5234a53ef0f4fd665" LogicalPosition="1722, 232" OcrText="Sign Out" Position="1722, 232" ScaleFactor="1.25" ScreenshotGuid="7a24dc08-08c1-497d-85fb-22f5ea08b80a" ServerVersion="1">
-                              <uc:CVCache.CvAnchorRelations>
-                                <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
-                              </uc:CVCache.CvAnchorRelations>
-                              <uc:CVCache.CvUiElements>
-                                <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="4">
-                                  <uc:CvElementInfo Category="Icon" Region="63, 35, 13, 14" />
-                                  <uc:CvElementInfo Category="Button" Region="52, 28, 84, 26" />
-                                </scg:List>
-                              </uc:CVCache.CvUiElements>
-                              <uc:CVCache.OcrTexts>
-                                <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="2">
-                                  <uc:OcrTextInfo Region="78, 36, 25, 13" Text="Sign" />
-                                  <uc:OcrTextInfo Region="105, 36, 21, 11" Text="Out" />
-                                </scg:List>
-                              </uc:CVCache.OcrTexts>
-                            </uc:CVCache>
-                          </scg:List>
-                        </uc:CvCacheContainer.Caches>
-                      </uc:CvCacheContainer>
-                    </p:CVScope.DesignTimeCacheContainer>
-                    <p:CVScope.OCREngine>
-                      <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
-                        <ActivityFunc.Argument>
-                          <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
-                        </ActivityFunc.Argument>
-                        <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,32" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_4" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
-                      </ActivityFunc>
-                    </p:CVScope.OCREngine>
-                    <p:CVScope.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="326124ae-e62a-477f-9bd6-d5da47871a98" InformativeScreenshot="5a5336148ff36c63b8cac354c3e56f8c" Selector="&lt;webctrl class='c-account-sidebar__profile-info-signout' parentid='account-sidebar' tag='DIV' /&gt;" TimeoutMS="5000" WaitForReady="INTERACTIVE" />
-                    </p:CVScope.Target>
-                    <p:CVScope.UseLocalServer>
-                      <InArgument x:TypeArguments="x:Boolean" />
-                    </p:CVScope.UseLocalServer>
-                  </p:CVScope>
-                </TryCatch.Try>
-                <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="436.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ActivityAction x:TypeArguments="s:Exception">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                      </ActivityAction.Argument>
-                    </ActivityAction>
-                  </Catch>
-                </TryCatch.Catches>
-              </TryCatch>
-            </Sequence>
-            <If Condition="[loggedIn]" sap:VirtualizedContainerService.HintSize="532.8,2077.6" sap2010:WorkflowViewState.IdRef="If_2">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckLoginProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="481.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="CheckLoginProcess.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <OutArgument x:TypeArguments="x:Boolean" x:Key="loggedIn">
+                  <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="loggedIn" />
+                </OutArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="481.6,95.2" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[loggedIn]" />
+            <If Condition="[loggedIn]" sap:VirtualizedContainerService.HintSize="481.6,1853.6" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="400,290.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
@@ -259,7 +153,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,1621.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence sap:VirtualizedContainerService.HintSize="400,1397.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="username" />
                     <Variable x:TypeArguments="ss:SecureString" Name="password" />
@@ -269,7 +163,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:GetRobotCredential AssetName="sc_main_account" CacheStrategy="None" DisplayName="Get Credential" FolderPath="galacticmerchantofficial@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="337.6,409.6" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[username]">
+                  <ui:GetRobotCredential AssetName="sc_main_account" CacheStrategy="None" DisplayName="Get Credential" FolderPath="galacticmerchantofficial@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="337.6,185.6" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[username]">
                     <ui:GetRobotCredential.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:GetRobotCredential.TimeoutMS>
