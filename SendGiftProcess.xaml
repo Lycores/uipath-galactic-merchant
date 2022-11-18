@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>970.4,5120.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>970.4,5121.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SendGiftProcess_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="80">
@@ -119,19 +119,19 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SendGiftProcess" sap:VirtualizedContainerService.HintSize="980.8,5056" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SendGiftProcess" sap:VirtualizedContainerService.HintSize="980.8,5056.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: My Hangar - Roberts Space Industries | Follow the development of Star Citizen an" sap:VirtualizedContainerService.HintSize="918.4,4932.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="697fffdc-23fd-4cc2-846d-057393a4b540" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: My Hangar - Roberts Space Industries | Follow the development of Star Citizen an" sap:VirtualizedContainerService.HintSize="918.4,4933.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="697fffdc-23fd-4cc2-846d-057393a4b540" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="884.8,4706.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="884.8,4707.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="currentName" />
               <Variable x:TypeArguments="ss:SecureString" Name="password" />
@@ -141,10 +141,13 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetRobotCredential Username="{x:Null}" AssetName="[senderOrchestratorName]" CacheStrategy="None" DisplayName="Get Credential" FolderPath="galacticmerchantofficial@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="822.4,409.6" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[password]">
+            <ui:GetRobotCredential AssetName="[senderOrchestratorName]" CacheStrategy="None" DisplayName="Get Credential" FolderPath="galacticmerchantofficial@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="822.4,409.6" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[password]">
               <ui:GetRobotCredential.TimeoutMS>
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:GetRobotCredential.TimeoutMS>
+              <ui:GetRobotCredential.Username>
+                <OutArgument x:TypeArguments="x:String" />
+              </ui:GetRobotCredential.Username>
             </ui:GetRobotCredential>
             <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="822.4,95.2" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[password]" />
             <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Integer.Parse(itemNum) &gt; 0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="822.4,3997.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">

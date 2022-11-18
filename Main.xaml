@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="840.8,462.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="844,462.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="47">
       <x:String>System.Activities</x:String>
@@ -175,7 +175,7 @@
                     <av:Size x:Key="ShapeSize">200,92.8</av:Size>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Buy Credit CCU Section" sap:VirtualizedContainerService.HintSize="200,92.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                <Sequence DisplayName="Buy Credit CCU Section" sap:VirtualizedContainerService.HintSize="640,1887.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataTable" Name="tableEntries" />
                     <Variable x:TypeArguments="x:String" Name="tablePath" />
@@ -245,7 +245,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CCUPairProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="CCUPairProcess.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="BuyCreditCCUProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="BuyCreditCCUProcess.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="fromShip">[fromShip]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="toShip">[toShip]</InArgument>
@@ -293,15 +293,23 @@
                     <Sequence sap:VirtualizedContainerService.HintSize="200,92.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="dateSpecified" />
+                        <Variable x:TypeArguments="x:String" Name="inXDays" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
+                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="337.6,251.2" sap2010:WorkflowViewState.IdRef="InputDialog_23" IsPassword="False" Label="融化离现在多久的升级包" Title="融化离现在多久的升级包">
+                        <ui:InputDialog.Result>
+                          <OutArgument x:TypeArguments="x:String">[inXDays]</OutArgument>
+                        </ui:InputDialog.Result>
+                      </ui:InputDialog>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="MeltCCUProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="MeltCCUProcess.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                          <InArgument x:TypeArguments="x:Int32" x:Key="inXDays">
+                            <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Integer.Parse(inXDays)" />
+                          </InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
@@ -328,67 +336,39 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <Sequence DisplayName="Buy credit paint" sap:VirtualizedContainerService.HintSize="200,92.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
                           <Sequence.Variables>
-                            <Variable x:TypeArguments="x:String" Name="tablePath" />
-                            <Variable x:TypeArguments="sd:DataTable" Name="tableEntries" />
+                            <Variable x:TypeArguments="x:String" Name="paintName" />
+                            <Variable x:TypeArguments="x:String" Name="numIterations" />
                           </Sequence.Variables>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="433.6,251.2" sap2010:WorkflowViewState.IdRef="InputDialog_7" IsPassword="False" Label="what is excel full path" Title="what is excel full path">
+                          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="337.6,251.2" sap2010:WorkflowViewState.IdRef="InputDialog_7" IsPassword="False" Label="请给我您要买的涂装全名" Title="请给我您要买的涂装全名">
                             <ui:InputDialog.Result>
-                              <OutArgument x:TypeArguments="x:String">[tablePath]</OutArgument>
+                              <OutArgument x:TypeArguments="x:String">[paintName]</OutArgument>
                             </ui:InputDialog.Result>
                           </ui:InputDialog>
-                          <ui:ReadCsvFile DataTable="[tableEntries]" Delimitator="Comma" DisplayName="Read CSV" FilePath="[tablePath]" sap:VirtualizedContainerService.HintSize="433.6,164.8" sap2010:WorkflowViewState.IdRef="ReadCsvFile_3" />
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WebLoginProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="433.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="WebLoginProcess.xaml">
+                          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="337.6,251.2" sap2010:WorkflowViewState.IdRef="InputDialog_24" IsPassword="False" Label="要买多少个？" Title="要买多少个？">
+                            <ui:InputDialog.Result>
+                              <OutArgument x:TypeArguments="x:String">[numIterations]</OutArgument>
+                            </ui:InputDialog.Result>
+                          </ui:InputDialog>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WebLoginProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="WebLoginProcess.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <scg:Dictionary x:TypeArguments="x:String, Argument" />
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
-                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[tableEntries]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="433.6,591.2" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
-                            <ui:ForEachRow.Body>
-                              <ActivityAction x:TypeArguments="sd:DataRow">
-                                <ActivityAction.Argument>
-                                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                                </ActivityAction.Argument>
-                                <Sequence DisplayName="Finish a table entry" sap:VirtualizedContainerService.HintSize="400,465.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
-                                  <Sequence.Variables>
-                                    <Variable x:TypeArguments="x:String" Name="paintName" />
-                                    <Variable x:TypeArguments="x:String" Name="numIterations" />
-                                  </Sequence.Variables>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap:VirtualizedContainerService.HintSize="337.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_14">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">[paintName]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">[row.Item("Paint Name").ToString]</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                  <Assign sap:VirtualizedContainerService.HintSize="337.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_15">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">[numIterations]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">[row.Item("Num of Set of Five").ToString]</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="BuyPaint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="BuyPaint.xaml">
-                                    <ui:InvokeWorkflowFile.Arguments>
-                                      <InArgument x:TypeArguments="x:String" x:Key="paintName">[paintName]</InArgument>
-                                      <InArgument x:TypeArguments="x:String" x:Key="numIterations">[numIterations]</InArgument>
-                                    </ui:InvokeWorkflowFile.Arguments>
-                                  </ui:InvokeWorkflowFile>
-                                </Sequence>
-                              </ActivityAction>
-                            </ui:ForEachRow.Body>
-                          </ui:ForEachRow>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="BuyPaint.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="BuyPaint.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="paintName">
+                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="paintName" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="numIterations">
+                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="numIterations" />
+                              </InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
                         </Sequence>
                       </FlowStep>
                     </FlowDecision.True>
@@ -503,7 +483,7 @@
                                               <OutArgument x:TypeArguments="x:String">[numIterations]</OutArgument>
                                             </Assign.To>
                                             <Assign.Value>
-                                              <InArgument x:TypeArguments="x:String">[row.Item("NumIterations").ToString]</InArgument>
+                                              <InArgument x:TypeArguments="x:String">[row.Item("Num of Set of One").ToString]</InArgument>
                                             </Assign.Value>
                                           </Assign>
                                           <If Condition="[fromShip &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="481.6,527.2" sap2010:WorkflowViewState.IdRef="If_5">
@@ -514,11 +494,17 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CCUPairProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="CCUPairProcess.xaml">
+                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="BuyWarbondCCUProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="BuyWarbondCCUProcess.xaml">
                                                   <ui:InvokeWorkflowFile.Arguments>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="fromShip">[fromShip]</InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="toShip">[toShip]</InArgument>
-                                                    <InArgument x:TypeArguments="x:String" x:Key="numIterations">[numIterations]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="fromShip">
+                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="fromShip" />
+                                                    </InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="toShip">
+                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="toShip" />
+                                                    </InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="numIterations">
+                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="numIterations" />
+                                                    </InArgument>
                                                   </ui:InvokeWorkflowFile.Arguments>
                                                 </ui:InvokeWorkflowFile>
                                               </Sequence>
@@ -563,96 +549,40 @@
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="x:String" Name="tablePath" />
                                         <Variable x:TypeArguments="sd:DataTable" Name="tableEntries" />
+                                        <Variable x:TypeArguments="x:String" Name="shipName" />
+                                        <Variable x:TypeArguments="x:String" Name="numShips" />
                                       </Sequence.Variables>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="577.6,95.2" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;该功能施工中&quot;]" />
-                                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="577.6,251.2" sap2010:WorkflowViewState.IdRef="InputDialog_17" IsPassword="False" Label="what is excel full path" Title="what is excel full path">
+                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="337.6,95.2" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;该功能施工中&quot;]" />
+                                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="337.6,251.2" sap2010:WorkflowViewState.IdRef="InputDialog_21" IsPassword="False" Label="请给出WB飞船全名" Title="请给出WB飞船全名">
                                         <ui:InputDialog.Result>
-                                          <OutArgument x:TypeArguments="x:String">[tablePath]</OutArgument>
+                                          <OutArgument x:TypeArguments="x:String">[shipName]</OutArgument>
                                         </ui:InputDialog.Result>
                                       </ui:InputDialog>
-                                      <ui:ReadCsvFile DataTable="[tableEntries]" Delimitator="Comma" DisplayName="Read CSV" FilePath="[tablePath]" sap:VirtualizedContainerService.HintSize="577.6,164.8" sap2010:WorkflowViewState.IdRef="ReadCsvFile_5" />
-                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WebLoginProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="577.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="WebLoginProcess.xaml">
+                                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="337.6,251.2" sap2010:WorkflowViewState.IdRef="InputDialog_22" IsPassword="False" Label="多少个这种飞船呢" Title="多少个这种飞船呢">
+                                        <ui:InputDialog.Result>
+                                          <OutArgument x:TypeArguments="x:String">[numShips]</OutArgument>
+                                        </ui:InputDialog.Result>
+                                      </ui:InputDialog>
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="WebLoginProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="WebLoginProcess.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                         </ui:InvokeWorkflowFile.Arguments>
                                       </ui:InvokeWorkflowFile>
-                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[tableEntries]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="577.6,1104.8" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
-                                        <ui:ForEachRow.Body>
-                                          <ActivityAction x:TypeArguments="sd:DataRow">
-                                            <ActivityAction.Argument>
-                                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                                            </ActivityAction.Argument>
-                                            <Sequence DisplayName="Finish a CCU Entry" sap:VirtualizedContainerService.HintSize="544,979.2" sap2010:WorkflowViewState.IdRef="Sequence_43">
-                                              <Sequence.Variables>
-                                                <Variable x:TypeArguments="x:String" Default="Dragonfly Black" Name="fromShip" />
-                                                <Variable x:TypeArguments="x:String" Default="Cutlass Black" Name="toShip" />
-                                                <Variable x:TypeArguments="x:String" Name="numIterations" />
-                                              </Sequence.Variables>
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <Assign sap:VirtualizedContainerService.HintSize="481.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_19">
-                                                <Assign.To>
-                                                  <OutArgument x:TypeArguments="x:String">[fromShip]</OutArgument>
-                                                </Assign.To>
-                                                <Assign.Value>
-                                                  <InArgument x:TypeArguments="x:String">[row.Item("From").ToString]</InArgument>
-                                                </Assign.Value>
-                                              </Assign>
-                                              <Assign sap:VirtualizedContainerService.HintSize="481.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_20">
-                                                <Assign.To>
-                                                  <OutArgument x:TypeArguments="x:String">[toShip]</OutArgument>
-                                                </Assign.To>
-                                                <Assign.Value>
-                                                  <InArgument x:TypeArguments="x:String">[row.Item("To").ToString]</InArgument>
-                                                </Assign.Value>
-                                              </Assign>
-                                              <Assign sap:VirtualizedContainerService.HintSize="481.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_21">
-                                                <Assign.To>
-                                                  <OutArgument x:TypeArguments="x:String">[numIterations]</OutArgument>
-                                                </Assign.To>
-                                                <Assign.Value>
-                                                  <InArgument x:TypeArguments="x:String">[row.Item("NumIterations").ToString]</InArgument>
-                                                </Assign.Value>
-                                              </Assign>
-                                              <If Condition="[fromShip &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="481.6,527.2" sap2010:WorkflowViewState.IdRef="If_6">
-                                                <If.Then>
-                                                  <Sequence sap:VirtualizedContainerService.HintSize="400,246.4" sap2010:WorkflowViewState.IdRef="Sequence_41">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CCUPairProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="CCUPairProcess.xaml">
-                                                      <ui:InvokeWorkflowFile.Arguments>
-                                                        <InArgument x:TypeArguments="x:String" x:Key="fromShip">[fromShip]</InArgument>
-                                                        <InArgument x:TypeArguments="x:String" x:Key="toShip">[toShip]</InArgument>
-                                                        <InArgument x:TypeArguments="x:String" x:Key="numIterations">[numIterations]</InArgument>
-                                                      </ui:InvokeWorkflowFile.Arguments>
-                                                    </ui:InvokeWorkflowFile>
-                                                  </Sequence>
-                                                </If.Then>
-                                                <If.Else>
-                                                  <Sequence sap:VirtualizedContainerService.HintSize="400,115.2" sap2010:WorkflowViewState.IdRef="Sequence_42">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                  </Sequence>
-                                                </If.Else>
-                                              </If>
-                                            </Sequence>
-                                          </ActivityAction>
-                                        </ui:ForEachRow.Body>
-                                      </ui:ForEachRow>
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="BuyWarbondShipProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="BuyWarbondShipProcess.xaml">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <InArgument x:TypeArguments="x:String" x:Key="shipName">
+                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="shipName" />
+                                          </InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="numShips">
+                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="numShips" />
+                                          </InArgument>
+                                        </ui:InvokeWorkflowFile.Arguments>
+                                      </ui:InvokeWorkflowFile>
                                     </Sequence>
                                   </FlowStep>
                                 </FlowDecision.True>
@@ -737,7 +667,7 @@
                                                 <av:Size x:Key="ShapeSize">200,92.8</av:Size>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <Sequence sap:VirtualizedContainerService.HintSize="400,964" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                            <Sequence sap:VirtualizedContainerService.HintSize="200,92.8" sap2010:WorkflowViewState.IdRef="Sequence_38">
                                               <Sequence.Variables>
                                                 <Variable x:TypeArguments="x:String" Name="emailStartNumAt" />
                                                 <Variable x:TypeArguments="x:String" Name="numEmail" />
@@ -760,12 +690,8 @@
                                               </ui:InputDialog>
                                               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="RegisterAccount.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="RegisterAccount.xaml">
                                                 <ui:InvokeWorkflowFile.Arguments>
-                                                  <InArgument x:TypeArguments="x:Int32" x:Key="emailStartNumAt">
-                                                    <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Integer.Parse(emailStartNumAt)" />
-                                                  </InArgument>
-                                                  <InArgument x:TypeArguments="x:Int32" x:Key="numEmail">
-                                                    <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Integer.Parse(numEmail)" />
-                                                  </InArgument>
+                                                  <InArgument x:TypeArguments="x:Int32" x:Key="emailStartNumAt">[Integer.Parse(emailStartNumAt)]</InArgument>
+                                                  <InArgument x:TypeArguments="x:Int32" x:Key="numEmail">[Integer.Parse(numEmail)]</InArgument>
                                                 </ui:InvokeWorkflowFile.Arguments>
                                               </ui:InvokeWorkflowFile>
                                             </Sequence>
@@ -847,11 +773,38 @@
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                         <Sequence sap:VirtualizedContainerService.HintSize="200,92.8" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                                          <Sequence.Variables>
+                                                            <Variable x:TypeArguments="x:String" Name="tablePath" />
+                                                            <Variable x:TypeArguments="sd:DataTable" Name="tableEntries" />
+                                                          </Sequence.Variables>
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
+                                                          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="433.6,251.2" sap2010:WorkflowViewState.IdRef="InputDialog_20" IsPassword="False" Label="what is excel full path" Title="what is excel full path">
+                                                            <ui:InputDialog.Result>
+                                                              <OutArgument x:TypeArguments="x:String">[tablePath]</OutArgument>
+                                                            </ui:InputDialog.Result>
+                                                          </ui:InputDialog>
+                                                          <ui:ReadCsvFile DataTable="[tableEntries]" Delimitator="Comma" DisplayName="Read CSV" FilePath="[tablePath]" sap:VirtualizedContainerService.HintSize="433.6,164.8" sap2010:WorkflowViewState.IdRef="ReadCsvFile_6" />
+                                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="433.6,95.2" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;使用了默认的icloud路径，或许需要根据情况更改&quot;]" />
+                                                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[tableEntries]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="433.6,240.8" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+                                                            <ui:ForEachRow.Body>
+                                                              <ActivityAction x:TypeArguments="sd:DataRow">
+                                                                <ActivityAction.Argument>
+                                                                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                                                </ActivityAction.Argument>
+                                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,115.2" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                </Sequence>
+                                                              </ActivityAction>
+                                                            </ui:ForEachRow.Body>
+                                                          </ui:ForEachRow>
                                                         </Sequence>
                                                       </FlowStep>
                                                     </FlowDecision.True>
