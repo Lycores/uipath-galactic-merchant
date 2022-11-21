@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="WebLoginProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="840.8,2690.4" sap2010:WorkflowViewState.IdRef="WebLoginProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="WebLoginProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="844,2556" sap2010:WorkflowViewState.IdRef="WebLoginProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
       <x:String>System.Activities</x:String>
@@ -102,19 +102,19 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WebLoginProcess" sap:VirtualizedContainerService.HintSize="684,2625.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WebLoginProcess" sap:VirtualizedContainerService.HintSize="640,2491.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Pledge - Roberts Space Industries | Follow the development of Star Citizen and S" sap:VirtualizedContainerService.HintSize="621.6,2502.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Pledge - Roberts Space Industries | Follow the development of Star Citizen and S" sap:VirtualizedContainerService.HintSize="577.6,2368" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="544,2276" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="544,2141.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="loggedIn" />
             </Sequence.Variables>
@@ -125,12 +125,9 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckLoginProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="481.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="CheckLoginProcess.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <OutArgument x:TypeArguments="x:Boolean" x:Key="loggedIn">
-                  <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="loggedIn" />
-                </OutArgument>
+                <OutArgument x:TypeArguments="x:Boolean" x:Key="loggedIn">[loggedIn]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="481.6,95.2" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[loggedIn]" />
             <If Condition="[loggedIn]" sap:VirtualizedContainerService.HintSize="481.6,1853.6" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="400,290.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
