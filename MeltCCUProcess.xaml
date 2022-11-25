@@ -190,7 +190,7 @@
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                               </ActivityAction.Argument>
                               <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                                <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: AnyWordGroup (124,29,431,13)&quot; +&#xD;&#xA;&quot;Anchor: Text 'ATTRIBUTED' (124,54,57,8)&quot;]" DesignTimeCacheId="843159e2-b706-4c2c-a8d9-4ec42b1224c1" DesignTimeScaleFactor="1.25" DisplayName="CV Get Text - Any Word Group" sap:VirtualizedContainerService.HintSize="400,231.2" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_1" InformativeScreenshot="ab1a485364c19d78c8dadcc58e66dbbe" NumberOfScrolls="2" RefreshBefore="True" Result="[productDescription]" ScrollDirection="None" Version="V5">
+                                <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: AnyWordGroup (124,29,431,13)&quot; +&#xA;&quot;Anchor: Text 'ATTRIBUTED' (124,54,57,8)&quot;]" DesignTimeCacheId="843159e2-b706-4c2c-a8d9-4ec42b1224c1" DesignTimeScaleFactor="1.25" DisplayName="CV Get Text - Any Word Group" sap:VirtualizedContainerService.HintSize="400,231.2" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_1" InformativeScreenshot="ab1a485364c19d78c8dadcc58e66dbbe" NumberOfScrolls="2" RefreshBefore="True" Result="[productDescription]" ScrollDirection="None" Version="V5">
                                   <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
                                     <uc:CvDescriptor Id="9a00e386-e91e-4eda-9397-ec442de7b5fb">
                                       <uc:CvDescriptor.Anchors>
@@ -308,7 +308,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <If Condition="[Not (productDescription.Contains(&quot;WARBOND&quot;))]" sap:VirtualizedContainerService.HintSize="544,1981.6" sap2010:WorkflowViewState.IdRef="If_2">
+                              <If Condition="[productDescription.Contains(&quot;STANDARD&quot;)]" sap:VirtualizedContainerService.HintSize="544,1981.6" sap2010:WorkflowViewState.IdRef="If_2">
                                 <If.Then>
                                   <Sequence sap:VirtualizedContainerService.HintSize="462.4,1648.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                     <sap:WorkflowViewStateService.ViewState>
