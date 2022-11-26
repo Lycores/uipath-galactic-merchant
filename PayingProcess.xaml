@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="PayingProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="840.8,2112" sap2010:WorkflowViewState.IdRef="PayingProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="PayingProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="840.8,2689.6" sap2010:WorkflowViewState.IdRef="PayingProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -92,13 +92,13 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="726.4,2047.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap:VirtualizedContainerService.HintSize="696,2624.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Cart - Roberts Space Industries | Follow the development of Star Citizen and Squ" sap:VirtualizedContainerService.HintSize="664,518.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="d1ecb4e7-f136-4f0a-a905-a8a7a082daae" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Cart - Roberts Space Industries | Follow the development of Star Citizen and Squ" sap:VirtualizedContainerService.HintSize="633.6,518.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="d1ecb4e7-f136-4f0a-a905-a8a7a082daae" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -128,68 +128,41 @@
         <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAF1SURBVDhPpVG7rgFRFJ1QEK+EKBSTSciglPgFUclIjMgUSt+gMoVEKSg1aj+g0/gFj5ZkSgUFEhSSxVnkzriZm5C7k5W919qv85Aehn/CVfwGruI3sMmn5ux5wCaHw+FV8redz2dns4BNnFYul5HJZGCa5kt52vF4dDYL2GS1WrHIqQlEIhGebrvduuXfyBtkWXbVf0HC6XTCeDymMBwO6XVd57bJZELearWQzWZRKpXQbrexXq8RDAbBiycSCfT7fTQaDdxuNzZcLhd0Oh30ej0Wz+dzFAoFLJdL7Pd75PN5LuAA0VAsFlGr1XC9XhGNRp/Jh65pGna7HRaLBRfMZjNYlsUcaxRFYbDZbCiKAaPRCNVqlbowoQ8Gg594Op0yzuVykGKxGDweDxNiWCAQgNDC4TAfUdwzlUohFAqxJplMwu/3M/b5fJDS6TRJt9ulr1Qq9IZh0NfrdcTjcaiqSi5O5vV6+W7NZlNorl/zDVzFDyHhDvzs0wIs9mEdAAAAAElFTkSuQmCC" InformativeScreenshot="6d17975d68cd96179b6fb92a5002bfec.jpg" Selector="&lt;html app='chrome.exe' title='Cart - Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" Url="https://robertsspaceindustries.com/store/pledge/cart" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="664,98.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="True" DisplayName="While" sap:VirtualizedContainerService.HintSize="664,1227.2" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="633.6,98.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="633.6,1804.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="628.8,1050.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="598.4,1628" sap2010:WorkflowViewState.IdRef="Sequence_13">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="566.4,927.2" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="536,1504.8" sap2010:WorkflowViewState.IdRef="TryCatch_5">
             <TryCatch.Try>
-              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: PayPal Checkout" sap:VirtualizedContainerService.HintSize="529.6,686.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="c6c17970-da63-49fb-9bc9-848ae64cabf3" Timeout="2000" Version="V2">
+              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: PayPal Checkout" sap:VirtualizedContainerService.HintSize="433.6,589.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="c6c17970-da63-49fb-9bc9-848ae64cabf3" Timeout="2000" Version="V2">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,460" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,363.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="433.6,336.8" sap2010:WorkflowViewState.IdRef="TryCatch_3">
-                        <TryCatch.Try>
-                          <Sequence sap:VirtualizedContainerService.HintSize="400,363.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <uix:NClick ClickType="Single" DisplayName="Click 'Complete Purchase'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c6c17970-da63-49fb-9bc9-848ae64cabf3" Version="V3">
-                              <uix:NClick.Target>
-                                <uix:TargetAnchorable Accuracy="1" BrowserURL="https://www.paypal.com/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;sessionID=uid_c2dd5a5ca3_mty6mtk6mtu&amp;buttonSessionID=uid_7755d2e61e_mty6mjg6ntc&amp;stickinessID=uid_e099e48701_mti6mzg6mzu&amp;inlinexo=false&amp;smokeHash=&amp;fundingSource=paypal&amp;buyerCountry=JP&amp;locale.x=en_US&amp;commit=true&amp;clientID=AfktafqamhHastICnL21GIvfRgyg28KZ7nFJfxBZJMjfrrqJUOz7U6CmlY4XsKl19pQys1KYQxITAqPa&amp;env=production&amp;sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWwuY29tL3Nkay9qcz9jbGllbnQtaWQ9QWZrdGFmcWFtaEhhc3RJQ25MMjFHSXZmUmd5ZzI4S1o3bkZKZnhCWkpNamZycnFKVU96N1U2Q21sWTRYc0tsMTlwUXlzMUtZUXhJVEFxUGEmY3VycmVuY3k9VVNEJnZhdWx0PWZhbHNlJmNvbXBvbmVudHM9YnV0dG9ucyIsImF0dHJzIjp7ImRhdGEtdWlkIjoidWlkX2l1bWdheGJleWVzbmh0cmlzeWdraXpmd3l1Z2hiZyJ9fQ&amp;xcomponent=1&amp;version=5.0.343&amp;token=7CY185844S6515702&amp;rcache=1&amp;useraction=CONTINUE&amp;cookieBannerVariant=1&amp;targetService4174=hermesnodeweb&amp;country.x=CA" DesignTimeRectangle="29, 616, 590, 60" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Complete Purchase'" FullSelectorArgument="&lt;webctrl id='payment-submit-btn' tag='BUTTON' visibleinnertext='Complete Purchase' aaname='Complete Purchase' /&gt;" FuzzySelectorArgument="&lt;webctrl id='payment-submit-btn' tag='BUTTON' visibleinnertext='Complete Purchase' aaname='Complete Purchase' type='' class='ppvx_btn___5-11-4 CheckoutButton_noMargin_mv-3h' check:text='Complete Purchase' /&gt;" Guid="a7d93d2a-34b5-4ed7-a6c7-a55638e4a880" ImageBase64="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" InformativeScreenshot="d4c1e285efdd9467bba0ace38a384c82.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='__zoid__paypal_checkout__*' title='PayPal Checkout' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
-                                  <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                      <uix:Target DesignTimeRectangle="312, 94, 23, 28" ElementType="Icon" FriendlyName="'PATH'" FullSelectorArgument="&lt;webctrl tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='path' type='' class='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABsAAAAgCAYAAADjaQM7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIuSURBVEhL5ZZPSBRhGIe/CQ97kU5e1ZTCUHNRzBCFbnYJQQ97EfVqKlggLhpm4Cr9WQhRFFRKBPekB72koZAEuRDsKcKLWqItKf3zYLfXeRfmc76Z3zezE9HFwwN7mefZmfnt7Ig/pyf0v7iAsYKmScq5OZoVodqnVNg8RQOzm9BlAWMftvdJhEf/CiMco57xdZeTgbGOF2+gKAiRoRWXF8bK2l5CQTBGKH10rHhhLO/OGDg4OI3RJcULYznV+OCg8MjsXhjjm4wOFqWDZFy9r+faAxLXoyb9JMofU7j9leKFMRgyMYo6ybjSkTU18U1K//p97rVHGO0SK2JQ6IUY/0Rd777qY3VdCRwrG4JCLQ1xEjM7GZKHP3CMbyqMmfcBSjWI3lUZe5hM41io9okmFoVSyK1HMsRYl9IVu1Q5AmOZtSGxk5IeEvGUEtOeGQoxRnE3ltvhM4ptKSHmWeqbOza88B6GGCi3CPeR0TrvilhsH/90x7Sz5yVGZjJCO5kROC6Zk/zEZ+lXYtol1j2HomyY/niEY7m3zd8GijVMQJEfd18fSDejxLQP4HvLUOZFy8ahEmKUGAwxA2+hEMFns7b3XYlIv/XB81UASBn+9ixmrEeSFzKmXWKVCQhdntt1yfyQMe2rQI35+AKx+uV9l8wPGdO+CmiWiAbgh3IZeY1OQt14idbzLggypuPG4hcY0y3OC98YCjHZrM+Jb4x/NzwGO/a/+iD4xv4dJ3QGafF8kqdkyiwAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
-                                    </scg:List>
-                                  </uix:TargetAnchorable.Anchors>
-                                </uix:TargetAnchorable>
-                              </uix:NClick.Target>
-                            </uix:NClick>
-                            <ui:Break sap:VirtualizedContainerService.HintSize="337.6,32" sap2010:WorkflowViewState.IdRef="Break_1" />
-                          </Sequence>
-                        </TryCatch.Try>
-                        <TryCatch.Catches>
-                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,162.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ActivityAction x:TypeArguments="s:Exception">
-                              <ActivityAction.Argument>
-                                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                              </ActivityAction.Argument>
-                              <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="333.6,92" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_2" Version="V3" />
-                            </ActivityAction>
-                          </Catch>
-                        </TryCatch.Catches>
-                      </TryCatch>
+                      <uix:NClick ClickType="Single" DisplayName="Click 'Complete Purchase'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c6c17970-da63-49fb-9bc9-848ae64cabf3" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable Accuracy="1" BrowserURL="https://www.paypal.com/webapps/hermes?flow=1-P&amp;ulReturn=true&amp;sessionID=uid_c2dd5a5ca3_mty6mtk6mtu&amp;buttonSessionID=uid_7755d2e61e_mty6mjg6ntc&amp;stickinessID=uid_e099e48701_mti6mzg6mzu&amp;inlinexo=false&amp;smokeHash=&amp;fundingSource=paypal&amp;buyerCountry=JP&amp;locale.x=en_US&amp;commit=true&amp;clientID=AfktafqamhHastICnL21GIvfRgyg28KZ7nFJfxBZJMjfrrqJUOz7U6CmlY4XsKl19pQys1KYQxITAqPa&amp;env=production&amp;sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWwuY29tL3Nkay9qcz9jbGllbnQtaWQ9QWZrdGFmcWFtaEhhc3RJQ25MMjFHSXZmUmd5ZzI4S1o3bkZKZnhCWkpNamZycnFKVU96N1U2Q21sWTRYc0tsMTlwUXlzMUtZUXhJVEFxUGEmY3VycmVuY3k9VVNEJnZhdWx0PWZhbHNlJmNvbXBvbmVudHM9YnV0dG9ucyIsImF0dHJzIjp7ImRhdGEtdWlkIjoidWlkX2l1bWdheGJleWVzbmh0cmlzeWdraXpmd3l1Z2hiZyJ9fQ&amp;xcomponent=1&amp;version=5.0.343&amp;token=7CY185844S6515702&amp;rcache=1&amp;useraction=CONTINUE&amp;cookieBannerVariant=1&amp;targetService4174=hermesnodeweb&amp;country.x=CA" DesignTimeRectangle="29, 616, 590, 60" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Complete Purchase'" FullSelectorArgument="&lt;webctrl id='payment-submit-btn' tag='BUTTON' visibleinnertext='Complete Purchase' aaname='Complete Purchase' /&gt;" FuzzySelectorArgument="&lt;webctrl id='payment-submit-btn' tag='BUTTON' visibleinnertext='Complete Purchase' aaname='Complete Purchase' type='' class='ppvx_btn___5-11-4 CheckoutButton_noMargin_mv-3h' check:text='Complete Purchase' /&gt;" Guid="a7d93d2a-34b5-4ed7-a6c7-a55638e4a880" ImageBase64="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" InformativeScreenshot="d4c1e285efdd9467bba0ace38a384c82.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='__zoid__paypal_checkout__*' title='PayPal Checkout' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="312, 94, 23, 28" ElementType="Icon" FriendlyName="'PATH'" FullSelectorArgument="&lt;webctrl tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='path' type='' class='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABsAAAAgCAYAAADjaQM7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIuSURBVEhL5ZZPSBRhGIe/CQ97kU5e1ZTCUHNRzBCFbnYJQQ97EfVqKlggLhpm4Cr9WQhRFFRKBPekB72koZAEuRDsKcKLWqItKf3zYLfXeRfmc76Z3zezE9HFwwN7mefZmfnt7Ig/pyf0v7iAsYKmScq5OZoVodqnVNg8RQOzm9BlAWMftvdJhEf/CiMco57xdZeTgbGOF2+gKAiRoRWXF8bK2l5CQTBGKH10rHhhLO/OGDg4OI3RJcULYznV+OCg8MjsXhjjm4wOFqWDZFy9r+faAxLXoyb9JMofU7j9leKFMRgyMYo6ybjSkTU18U1K//p97rVHGO0SK2JQ6IUY/0Rd777qY3VdCRwrG4JCLQ1xEjM7GZKHP3CMbyqMmfcBSjWI3lUZe5hM41io9okmFoVSyK1HMsRYl9IVu1Q5AmOZtSGxk5IeEvGUEtOeGQoxRnE3ltvhM4ptKSHmWeqbOza88B6GGCi3CPeR0TrvilhsH/90x7Sz5yVGZjJCO5kROC6Zk/zEZ+lXYtol1j2HomyY/niEY7m3zd8GijVMQJEfd18fSDejxLQP4HvLUOZFy8ahEmKUGAwxA2+hEMFns7b3XYlIv/XB81UASBn+9ixmrEeSFzKmXWKVCQhdntt1yfyQMe2rQI35+AKx+uV9l8wPGdO+CmiWiAbgh3IZeY1OQt14idbzLggypuPG4hcY0y3OC98YCjHZrM+Jb4x/NzwGO/a/+iD4xv4dJ3QGafF8kqdkyiwAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <ui:Break sap:VirtualizedContainerService.HintSize="337.6,32" sap2010:WorkflowViewState.IdRef="Break_1" />
                     </Sequence>
                   </ActivityAction>
                 </uix:NApplicationCard.Body>
@@ -199,10 +172,10 @@
               </uix:NApplicationCard>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="532.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="502.4,1330.4" sap2010:WorkflowViewState.IdRef="Catch`1_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -210,26 +183,26 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="496,1260" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence sap:VirtualizedContainerService.HintSize="496,1260" sap2010:WorkflowViewState.IdRef="Sequence_16">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: PayPal Checkout" sap:VirtualizedContainerService.HintSize="433.6,578.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="c434fe82-690f-45a5-8f53-1f3d3adf0c80" Version="V2">
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: PayPal Checkout" sap:VirtualizedContainerService.HintSize="433.6,578.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="c434fe82-690f-45a5-8f53-1f3d3adf0c80" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,352" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,352" sap2010:WorkflowViewState.IdRef="Sequence_14">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="337.6,95.2" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;1&quot;]" />
-                            <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="337.6,92" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="337.6,95.2" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;1&quot;]" />
+                            <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="337.6,92" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_3" Version="V3" />
                           </Sequence>
                         </ActivityAction>
                       </uix:NApplicationCard.Body>
@@ -274,6 +247,9 @@
           </TryCatch>
         </Sequence>
       </ui:InterruptibleWhile.Body>
+      <ui:InterruptibleWhile.Condition>
+        <Literal x:TypeArguments="x:Boolean" Value="True" />
+      </ui:InterruptibleWhile.Condition>
     </ui:InterruptibleWhile>
   </Sequence>
 </Activity>
