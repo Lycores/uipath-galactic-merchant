@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GSuiteTest" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="919.2,4501.6" sap2010:WorkflowViewState.IdRef="GSuiteTest_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GSuiteTest" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="919.2,7459.2" sap2010:WorkflowViewState.IdRef="GSuiteTest_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="96">
       <x:String>System.Activities</x:String>
@@ -122,13 +122,13 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Key Generating" sap:VirtualizedContainerService.HintSize="929.6,4436.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Key Generating" sap:VirtualizedContainerService.HintSize="929.6,7394.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" KeyPath="{x:Null}" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" TimeoutMS="{x:Null}" UserEmail="{x:Null}" AuthenticationType="OAuthClientID" CredentialID="494513965513-i8e53eb2d6d803pfjdjuisvm9nr1qtds.apps.googleusercontent.com" CredentialSecret="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" DataStoreLocation="Local disk" DisplayName="GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="867.2,4313.6" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyType="JSON" OAuthClient="UiPath" Password="notasecret" Services="Unselected">
+    <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" KeyPath="{x:Null}" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" TimeoutMS="{x:Null}" UserEmail="{x:Null}" AuthenticationType="OAuthClientID" CredentialID="494513965513-i8e53eb2d6d803pfjdjuisvm9nr1qtds.apps.googleusercontent.com" CredentialSecret="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" DataStoreLocation="Local disk" DisplayName="GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="867.2,7271.2" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyType="JSON" OAuthClient="UiPath" Password="notasecret" Services="Unselected">
       <uga:GSuiteApplicationScope.AuthenticationScopes>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
           <InArgument x:TypeArguments="x:String">https://www.googleapis.com/auth/drive</InArgument>
@@ -139,15 +139,11 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ug:SimpleObjectContainer" Name="GSuiteScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="833.6,4192" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="833.6,7149.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="fileID" />
               <Variable x:TypeArguments="sd:DataTable" Name="itemsDataTable" />
-              <Variable x:TypeArguments="scg:List(x:String)" Name="keyCollection">
-                <Variable.Default>
-                  <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="new List(Of String)" />
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(Of String)]" Name="keyCollection" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -156,19 +152,19 @@
             </sap:WorkflowViewStateService.ViewState>
             <uga:FindFiles ContinueOnError="{x:Null}" DriveTarget="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" FirstResultId="[fileID]" sap:VirtualizedContainerService.HintSize="771.2,90.4" sap2010:WorkflowViewState.IdRef="FindFiles_1" MaxResults="50" SearchExpression="name = 'StarCitizen'" SupportsTeamDrives="False" />
             <uga:ReadRange ContinueOnError="{x:Null}" GoogleSpreadsheet="{x:Null}" Range="{x:Null}" AuthScopesInvalid="False" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="771.2,223.2" sap2010:WorkflowViewState.IdRef="ReadRange_1" IncludeHeaders="True" Result="[itemsDataTable]" SheetName="Items" SpreadsheetId="[fileID]" />
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[itemsDataTable]" DisplayName="Collect All Prime Key" sap:VirtualizedContainerService.HintSize="771.2,797.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[itemsDataTable]" DisplayName="Collect All Prime Key" sap:VirtualizedContainerService.HintSize="771.2,1386.4" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="544,672" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="544,1260.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[CurrentRow.Item(&quot;Prime Key&quot;).ToString &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="481.6,548.8" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If Condition="[CurrentRow.Item(&quot;Source Image Key&quot;).ToString &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="481.6,548.8" sap2010:WorkflowViewState.IdRef="If_3">
                       <If.Then>
                         <Sequence sap:VirtualizedContainerService.HintSize="400,268" sap2010:WorkflowViewState.IdRef="Sequence_10">
                           <sap:WorkflowViewStateService.ViewState>
@@ -181,7 +177,7 @@
                               <InArgument x:TypeArguments="scg:List(x:String)">[keyCollection]</InArgument>
                             </InvokeMethod.TargetObject>
                             <InArgument x:TypeArguments="x:String">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow.Item(&quot;Prime Key&quot;).ToString" />
+                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow.Item(&quot;Source Image Key&quot;).ToString" />
                             </InArgument>
                           </InvokeMethod>
                         </Sequence>
@@ -196,37 +192,65 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                  </Sequence>
-                </ActivityAction>
-              </ui:ForEachRow.Body>
-            </ui:ForEachRow>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[itemsDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="771.2,2574.4" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
-              <ui:ForEachRow.Body>
-                <ActivityAction x:TypeArguments="sd:DataRow">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="737.6,2448.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[CurrentRow.Item(&quot;Prime Key&quot;).ToString = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="675.2,2325.6" sap2010:WorkflowViewState.IdRef="If_4">
+                    <If Condition="[CurrentRow.Item(&quot;Product Image Key&quot;).ToString &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="481.6,548.8" sap2010:WorkflowViewState.IdRef="If_5">
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="593.6,2044.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <Sequence sap:VirtualizedContainerService.HintSize="400,268" sap2010:WorkflowViewState.IdRef="Sequence_17">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Random key generator | ACTE Technology" sap:VirtualizedContainerService.HintSize="531.2,1921.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="323a8ebd-aff8-4360-877c-fc74769b2baa" Version="V2">
+                          <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="337.6,144.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="Add">
+                            <InvokeMethod.TargetObject>
+                              <InArgument x:TypeArguments="scg:List(x:String)">[keyCollection]</InArgument>
+                            </InvokeMethod.TargetObject>
+                            <InArgument x:TypeArguments="x:String">
+                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow.Item(&quot;Product Image Key&quot;).ToString" />
+                            </InArgument>
+                          </InvokeMethod>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="400,115.2" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[itemsDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="771.2,4943.2" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="737.6,4817.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[CurrentRow.Item(&quot;Source Image Key&quot;).ToString = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="675.2,2327.2" sap2010:WorkflowViewState.IdRef="If_4">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="593.6,2046.4" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Random key generator | ACTE Technology" sap:VirtualizedContainerService.HintSize="531.2,1923.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="323a8ebd-aff8-4360-877c-fc74769b2baa" Version="V2">
                             <uix:NApplicationCard.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="497.6,1695.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="497.6,1696.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="x:String" Name="clipboardValue" />
                                     <Variable x:TypeArguments="x:Int32" Name="rowIndex" />
@@ -236,7 +260,7 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="435.2,1023.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[keyCollection.Contains(clipboardValue)]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="435.2,1023.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
                                     <ui:InterruptibleDoWhile.Body>
                                       <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,846.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
                                         <sap:WorkflowViewStateService.ViewState>
@@ -254,7 +278,7 @@
                                           <uix:NClick.Target>
                                             <uix:TargetAnchorable BrowserURL="https://acte.ltd/utils/randomkeygen" DesignTimeRectangle="433, 766, 72, 34" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'copy'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='BUTTON' class='btn btn-small btn-outline-secondary' aaname='copy' check:innerText='COPY' /&gt;" Guid="18a8c221-40fd-4572-b974-5dda4dfae450" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEwAAAAmCAYAAABu+H0XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAASvSURBVGhD7ZrPS2JdGMfvv9IisJWu3DW0ubQogpmXYGqVzMKXWRSzkHnhjV54xaCYhQsXwcC7CFwIwhDBEMEwBOG08GY1YgwilP2wtKxrWTcSvu95rufaveb1R+Mi4nzgEc/xePV87nN+6L3S/f097u7uoGkabm9vcXNzg3K5jOvra1xdXVmiVCq92DD3k/pODsgFOSE35IhcSfTEEGVIUlUVl5eXuLi40KNYLFri/Pz8RUR9v4z+Ut/JgSGP3BjSJJJFNinIoMAKOTH8kCuJnlBKCln2kBtyRK4kSjtKQ0FzyBG5kmi8np2d8WqBHeSIXEk02Z2envJqgR3kiFxJZC6Xy/FqgR3kiFZWqVAo4OjoiFcL7CBH5EqiVDs8POTVAjvIEbnShWWzWV4tsIMc6cJOTk6wv7/PqwV2kDByJYS1CTnShdHs3zVhWgHp+AZi6xQpZMu83gYtl4Git92AkilAq/AX6ilm+DFNEc8gr2q8QRU1w+pTBV5qjPqLtcmUeKl9LML29vZ49ROpFBALTcDZ64b83o9PwSACvgnIbhfc3v+gqLwdR01F8XHEBUf/GKZmg6y9H3+O9MPhHsNMNAOrBkZ8Hj3Ofgy/fmONfheco36sGGtWbhketxdLdruk4iqm3D6sFHm5A0gYufp9YZUDRLwuyH9FkawTg0oJybAPU5GDmgSNdV52jiEUb3CWc2sIMJHyXMIqjYS9iyLPi2ayES8cg0Eo/A16+cMq6r8K+2R8/8cNz5fmGWgHOeqKsOTCEBzeKLJ2w8kMnWHnEEI/ebkR5QQCgy7MrJuUNREGlLA02Yepr/wEVDJYHJUR+GHNUzpRr9gx2vqeDeiOMG0DMyxbFtt8ezY8Bse/G4+HXB3q8iR6JpcfsqSpMECZ64Mn+pA5WiII2ZR1qKQQGmQnKsXLT6Am7Pj4+OnCUgt4NbCAJC82p4SVD6ZMaMZhFOO981B4saMM09EQm5UhL1QNpRfHIAfrhnmHdEdYizNvpYDIuz4E4rzYjFwUnl4/vhs9bPI5+W9+NieytvUrcnmNZb8XkR/sWAPziLVYsVvRHWGZMIZZJsTanBdis30YZwtAS+i4TjakeFEXNuDFDFt9aQXWY9aH8UE3HCPTiPxqnDv5L2wB6HW1l9Ut6I4wsLlhgE3Qa+0lu7o6DcdoGK1+iCVDsnWuI2Gv57FUtxdL7rX4XD1TTUP7N+iSMCbhq48t6yzLHq/jVTTtYUOqr2AueJpkWXXbUbeX6mjom3iOwmiCTS6w1c89gdA3tvs2TnpFQ/7nMgJvXRhmk28tF/JsbmHbhuG/w1DMGVI+gBKeZrLe4FO8LnNelrAqaorJeT/Edvt96NGD7fLf+vB5vcFGkX4ZfPbhD7ZTr7ZlwXbynrnlx5tf4jkJo4duCHvpCGEdIoR1iBDWIUJYh1iEiX9cW1P7A1H8Rd0eQliH1C6CiMts7VG7zEYP4kJua2oXco1bBehmMUFjyE3tVgHjZhQKujVRYIWcGH70m1GM250o5WivkU6nsbu7i2QyiZ2dHWxvb2NrawuJREKPzc3NpqEoyrOKRt/RHEa/qI/UV+oz9Z0ckAtyYgzHYrGI/wHToYFgQvBD+wAAAABJRU5ErkJggg==" InformativeScreenshot="fad2cdd319e01d543735b62651f9b966.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Random key generator | ACTE Technology' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                                               <uix:TargetAnchorable.Anchors>
-                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                   <uix:Target DesignTimeRectangle="302, 752, 125, 63" ElementType="Text" FriendlyName="'Basic 16'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='TD' /&gt;" FuzzyAccuracy="0.72" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='align-middle' aaname='Basic 16' check:innerText='Basic 16' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
                                                 </scg:List>
                                               </uix:TargetAnchorable.Anchors>
@@ -269,17 +293,12 @@
                                         <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[clipboardValue]" />
                                       </Sequence>
                                     </ui:InterruptibleDoWhile.Body>
-                                    <ui:InterruptibleDoWhile.Condition>
-                                      <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="keyCollection.Contains(clipboardValue)" />
-                                    </ui:InterruptibleDoWhile.Condition>
                                   </ui:InterruptibleDoWhile>
                                   <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="435.2,148" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Add">
                                     <InvokeMethod.TargetObject>
                                       <InArgument x:TypeArguments="scg:List(x:String)">[keyCollection]</InArgument>
                                     </InvokeMethod.TargetObject>
-                                    <InArgument x:TypeArguments="x:String">
-                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="clipboardValue" />
-                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String">[clipboardValue]</InArgument>
                                   </InvokeMethod>
                                   <Assign sap:VirtualizedContainerService.HintSize="435.2,71.2" sap2010:WorkflowViewState.IdRef="Assign_2">
                                     <Assign.To>
@@ -292,7 +311,7 @@
                                   <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="435.2,98.4" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[rowIndex.ToString]" />
                                   <Assign sap:VirtualizedContainerService.HintSize="435.2,71.2" sap2010:WorkflowViewState.IdRef="Assign_3">
                                     <Assign.To>
-                                      <OutArgument x:TypeArguments="x:Object">[itemsDataTable.Rows(rowIndex)("Prime Key")]</OutArgument>
+                                      <OutArgument x:TypeArguments="x:Object">[itemsDataTable.Rows(rowIndex)("Source Image Key")]</OutArgument>
                                     </Assign.To>
                                     <Assign.Value>
                                       <InArgument x:TypeArguments="x:Object">[clipboardValue]</InArgument>
@@ -309,6 +328,106 @@
                       </If.Then>
                       <If.Else>
                         <Sequence sap:VirtualizedContainerService.HintSize="400,115.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <If Condition="[CurrentRow.Item(&quot;Product Image Key&quot;).ToString = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="675.2,2327.2" sap2010:WorkflowViewState.IdRef="If_6">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="593.6,2046.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Random key generator | ACTE Technology" sap:VirtualizedContainerService.HintSize="531.2,1923.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="323a8ebd-aff8-4360-877c-fc74769b2baa" Version="V2">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="497.6,1696.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="x:String" Name="clipboardValue" />
+                                    <Variable x:TypeArguments="x:Int32" Name="rowIndex" />
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[keyCollection.Contains(clipboardValue)]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="435.2,1023.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                                    <ui:InterruptibleDoWhile.Body>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,846.4" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <uix:NClick ClickType="Single" DisplayName="Click 'Generate'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="323a8ebd-aff8-4360-877c-fc74769b2baa" Version="V3">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://acte.ltd/utils/randomkeygen" DesignTimeRectangle="284, 499, 179, 60" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Generate'" FullSelectorArgument="&lt;webctrl parentid='main' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main' tag='BUTTON' type='' class='btn btn-outline-primary' aaname='Generate' check:innerText='GENERATE' /&gt;" Guid="5804d89a-1407-4782-97b5-d331963cde3b" ImageBase64="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" InformativeScreenshot="87ce9308664bbc57705ddfef323f1bf5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Random key generator | ACTE Technology' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                          </uix:NClick.Target>
+                                        </uix:NClick>
+                                        <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                                        <uix:NClick ClickType="Single" DisplayName="Click 'copy'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="323a8ebd-aff8-4360-877c-fc74769b2baa" Version="V3">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://acte.ltd/utils/randomkeygen" DesignTimeRectangle="433, 766, 72, 34" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'copy'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='BUTTON' class='btn btn-small btn-outline-secondary' aaname='copy' check:innerText='COPY' /&gt;" Guid="18a8c221-40fd-4572-b974-5dda4dfae450" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEwAAAAmCAYAAABu+H0XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAASvSURBVGhD7ZrPS2JdGMfvv9IisJWu3DW0ubQogpmXYGqVzMKXWRSzkHnhjV54xaCYhQsXwcC7CFwIwhDBEMEwBOG08GY1YgwilP2wtKxrWTcSvu95rufaveb1R+Mi4nzgEc/xePV87nN+6L3S/f097u7uoGkabm9vcXNzg3K5jOvra1xdXVmiVCq92DD3k/pODsgFOSE35IhcSfTEEGVIUlUVl5eXuLi40KNYLFri/Pz8RUR9v4z+Ut/JgSGP3BjSJJJFNinIoMAKOTH8kCuJnlBKCln2kBtyRK4kSjtKQ0FzyBG5kmi8np2d8WqBHeSIXEk02Z2envJqgR3kiFxJZC6Xy/FqgR3kiFZWqVAo4OjoiFcL7CBH5EqiVDs8POTVAjvIEbnShWWzWV4tsIMc6cJOTk6wv7/PqwV2kDByJYS1CTnShdHs3zVhWgHp+AZi6xQpZMu83gYtl4Git92AkilAq/AX6ilm+DFNEc8gr2q8QRU1w+pTBV5qjPqLtcmUeKl9LML29vZ49ROpFBALTcDZ64b83o9PwSACvgnIbhfc3v+gqLwdR01F8XHEBUf/GKZmg6y9H3+O9MPhHsNMNAOrBkZ8Hj3Ofgy/fmONfheco36sGGtWbhketxdLdruk4iqm3D6sFHm5A0gYufp9YZUDRLwuyH9FkawTg0oJybAPU5GDmgSNdV52jiEUb3CWc2sIMJHyXMIqjYS9iyLPi2ayES8cg0Eo/A16+cMq6r8K+2R8/8cNz5fmGWgHOeqKsOTCEBzeKLJ2w8kMnWHnEEI/ebkR5QQCgy7MrJuUNREGlLA02Yepr/wEVDJYHJUR+GHNUzpRr9gx2vqeDeiOMG0DMyxbFtt8ezY8Bse/G4+HXB3q8iR6JpcfsqSpMECZ64Mn+pA5WiII2ZR1qKQQGmQnKsXLT6Am7Pj4+OnCUgt4NbCAJC82p4SVD6ZMaMZhFOO981B4saMM09EQm5UhL1QNpRfHIAfrhnmHdEdYizNvpYDIuz4E4rzYjFwUnl4/vhs9bPI5+W9+NieytvUrcnmNZb8XkR/sWAPziLVYsVvRHWGZMIZZJsTanBdis30YZwtAS+i4TjakeFEXNuDFDFt9aQXWY9aH8UE3HCPTiPxqnDv5L2wB6HW1l9Ut6I4wsLlhgE3Qa+0lu7o6DcdoGK1+iCVDsnWuI2Gv57FUtxdL7rX4XD1TTUP7N+iSMCbhq48t6yzLHq/jVTTtYUOqr2AueJpkWXXbUbeX6mjom3iOwmiCTS6w1c89gdA3tvs2TnpFQ/7nMgJvXRhmk28tF/JsbmHbhuG/w1DMGVI+gBKeZrLe4FO8LnNelrAqaorJeT/Edvt96NGD7fLf+vB5vcFGkX4ZfPbhD7ZTr7ZlwXbynrnlx5tf4jkJo4duCHvpCGEdIoR1iBDWIUJYh1iEiX9cW1P7A1H8Rd0eQliH1C6CiMts7VG7zEYP4kJua2oXco1bBehmMUFjyE3tVgHjZhQKujVRYIWcGH70m1GM250o5WivkU6nsbu7i2QyiZ2dHWxvb2NrawuJREKPzc3NpqEoyrOKRt/RHEa/qI/UV+oz9Z0ckAtyYgzHYrGI/wHToYFgQvBD+wAAAABJRU5ErkJggg==" InformativeScreenshot="fad2cdd319e01d543735b62651f9b966.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Random key generator | ACTE Technology' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                  <uix:Target DesignTimeRectangle="302, 752, 125, 63" ElementType="Text" FriendlyName="'Basic 16'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='TD' /&gt;" FuzzyAccuracy="0.72" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='align-middle' aaname='Basic 16' check:innerText='Basic 16' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:NClick.Target>
+                                        </uix:NClick>
+                                        <ui:GetFromClipboard TimeoutMS="{x:Null}" DisplayName="Get From Clipboard" sap:VirtualizedContainerService.HintSize="337.6,32" sap2010:WorkflowViewState.IdRef="GetFromClipboard_2">
+                                          <ui:GetFromClipboard.Result>
+                                            <OutArgument x:TypeArguments="x:String">[clipboardValue]</OutArgument>
+                                          </ui:GetFromClipboard.Result>
+                                        </ui:GetFromClipboard>
+                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[clipboardValue]" />
+                                      </Sequence>
+                                    </ui:InterruptibleDoWhile.Body>
+                                  </ui:InterruptibleDoWhile>
+                                  <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="435.2,148" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" MethodName="Add">
+                                    <InvokeMethod.TargetObject>
+                                      <InArgument x:TypeArguments="scg:List(x:String)">[keyCollection]</InArgument>
+                                    </InvokeMethod.TargetObject>
+                                    <InArgument x:TypeArguments="x:String">[clipboardValue]</InArgument>
+                                  </InvokeMethod>
+                                  <Assign sap:VirtualizedContainerService.HintSize="435.2,71.2" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">[rowIndex]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">[itemsDataTable.Rows.IndexOf(currentRow)]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="435.2,98.4" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[rowIndex.ToString]" />
+                                  <Assign sap:VirtualizedContainerService.HintSize="435.2,71.2" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Object">[itemsDataTable.Rows(rowIndex)("Product Image Key")]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Object">[clipboardValue]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="c2cb1e9703d84fa641ebc7203b78017f.jpg" Selector="&lt;html app='chrome.exe' title='Random key generator | ACTE Technology' /&gt;" Url="https://acte.ltd/utils/randomkeygen" />
+                            </uix:NApplicationCard.TargetApp>
+                          </uix:NApplicationCard>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="400,115.2" sap2010:WorkflowViewState.IdRef="Sequence_22">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
