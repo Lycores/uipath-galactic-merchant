@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="MakeProductImageProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1164,8841.6" sap2010:WorkflowViewState.IdRef="MakeProductImageProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="MakeProductImageProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1164,9185.6" sap2010:WorkflowViewState.IdRef="MakeProductImageProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="102">
       <x:String>System.Activities</x:String>
@@ -120,19 +120,19 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MakeProductImageProcess" sap:VirtualizedContainerService.HintSize="1174.4,8776.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MakeProductImageProcess" sap:VirtualizedContainerService.HintSize="1174.4,9120.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 我的工作台" sap:VirtualizedContainerService.HintSize="1112,8653.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="47591138-6e3a-4fb5-8adc-4a89188815ab" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 我的工作台" sap:VirtualizedContainerService.HintSize="1112,8997.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="47591138-6e3a-4fb5-8adc-4a89188815ab" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1078.4,8427.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1078.4,8771.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="clientID" />
               <Variable x:TypeArguments="x:String" Name="clientSecret" />
@@ -142,20 +142,20 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetRobotAsset AssetName="Google_API_ClientID" CacheStrategy="None" DisplayName="Get Asset" FolderPath="galacticmerchantofficial@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="1016,185.6" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+            <ui:GetRobotAsset AssetName="Google_API_ClientID" CacheStrategy="None" DisplayName="Get Asset" FolderPath="galacticmerchantofficial@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="1016,357.6" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
               <ui:GetRobotAsset.TimeoutMS>
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:GetRobotAsset.TimeoutMS>
               <ui:GetRobotAsset.Value>
-                <OutArgument x:TypeArguments="x:String" />
+                <OutArgument x:TypeArguments="x:String">[clientID]</OutArgument>
               </ui:GetRobotAsset.Value>
             </ui:GetRobotAsset>
-            <ui:GetRobotAsset AssetName="Google_API_ClientSecret" CacheStrategy="None" DisplayName="Get Asset" FolderPath="galacticmerchantofficial@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="1016,185.6" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+            <ui:GetRobotAsset AssetName="Google_API_ClientSecret" CacheStrategy="None" DisplayName="Get Asset" FolderPath="galacticmerchantofficial@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="1016,357.6" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
               <ui:GetRobotAsset.TimeoutMS>
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:GetRobotAsset.TimeoutMS>
               <ui:GetRobotAsset.Value>
-                <OutArgument x:TypeArguments="x:String" />
+                <OutArgument x:TypeArguments="x:String">[clientSecret]</OutArgument>
               </ui:GetRobotAsset.Value>
             </ui:GetRobotAsset>
             <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" KeyPath="{x:Null}" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" TimeoutMS="{x:Null}" UserEmail="{x:Null}" AuthenticationType="OAuthClientID" CredentialID="[clientID]" CredentialSecret="[clientSecret]" DataStoreLocation="Local disk" DisplayName="GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="1016,7851.2" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyType="JSON" OAuthClient="UiPath" Password="notasecret" Services="Unselected">
