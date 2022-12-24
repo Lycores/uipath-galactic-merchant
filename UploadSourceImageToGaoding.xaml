@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="MakeProductImageProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1164,9076" sap2010:WorkflowViewState.IdRef="MakeProductImageProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="MakeProductImageProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1164,12213.6" sap2010:WorkflowViewState.IdRef="MakeProductImageProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="102">
       <x:String>System.Activities</x:String>
@@ -120,19 +120,19 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MakeProductImageProcess" sap:VirtualizedContainerService.HintSize="1174.4,9011.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MakeProductImageProcess" sap:VirtualizedContainerService.HintSize="1174.4,12148.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Use Browser Chrome: 我的工作台" sap:VirtualizedContainerService.HintSize="1112,8888" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="{x:Null}" InteractionMode="DebuggerApi" IsIncognito="{x:Null}" OpenMode="IfNotOpen" OutUiElement="{x:Null}" ScopeGuid="47591138-6e3a-4fb5-8adc-4a89188815ab" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Use Browser Chrome: 我的工作台" sap:VirtualizedContainerService.HintSize="1112,12025.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="{x:Null}" InteractionMode="DebuggerApi" IsIncognito="{x:Null}" OpenMode="IfNotOpen" OutUiElement="{x:Null}" ScopeGuid="47591138-6e3a-4fb5-8adc-4a89188815ab" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1078.4,8661.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1078.4,11799.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="clientID" />
               <Variable x:TypeArguments="x:String" Name="clientSecret" />
@@ -158,7 +158,7 @@
                 <OutArgument x:TypeArguments="x:String">[clientSecret]</OutArgument>
               </ui:GetRobotAsset.Value>
             </ui:GetRobotAsset>
-            <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" AuthenticationType="OAuthClientID" ContinueOnError="{x:Null}" CredentialID="[clientID]" CredentialSecret="[clientSecret]" DataStoreLocation="Local disk" DisplayName="GSuite Application Scope" Folder="{x:Null}" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="1016,7741.6" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyPath="{x:Null}" KeyType="JSON" OAuthClient="UiPath" Password="notasecret" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" Services="Unselected" TimeoutMS="{x:Null}" User="{x:Null}" UserEmail="{x:Null}">
+            <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" AuthenticationType="OAuthClientID" ContinueOnError="{x:Null}" CredentialID="[clientID]" CredentialSecret="[clientSecret]" DataStoreLocation="Local disk" DisplayName="GSuite Application Scope" Folder="{x:Null}" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="1016,10879.2" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyPath="{x:Null}" KeyType="JSON" OAuthClient="UiPath" Password="notasecret" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" Services="Unselected" TimeoutMS="{x:Null}" User="{x:Null}" UserEmail="{x:Null}">
               <uga:GSuiteApplicationScope.AuthenticationScopes>
                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                   <InArgument x:TypeArguments="x:String">https://www.googleapis.com/auth/drive</InArgument>
@@ -169,7 +169,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ug:SimpleObjectContainer" Name="GSuiteScope" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="982.4,7620" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="982.4,10757.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="fileID" />
                       <Variable x:TypeArguments="sd:DataTable" Name="itemsDataTable" />
@@ -182,13 +182,13 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <uga:FindFiles DriveTarget="{x:Null}" AuthScopesInvalid="False" ContinueOnError="{x:Null}" DisplayName="Find Files and Folders" FirstResultId="[fileID]" sap:VirtualizedContainerService.HintSize="920,92" sap2010:WorkflowViewState.IdRef="FindFiles_1" MaxResults="50" Result="{x:Null}" SearchExpression="name = 'StarCitizen'" SupportsTeamDrives="False" />
                     <uga:ReadRange AuthScopesInvalid="False" ContinueOnError="{x:Null}" DisplayName="Read Range" GoogleSpreadsheet="{x:Null}" sap:VirtualizedContainerService.HintSize="920,228" sap2010:WorkflowViewState.IdRef="ReadRange_1" IncludeHeaders="True" Range="{x:Null}" Result="[itemsDataTable]" SheetName="Items" SpreadsheetId="[fileID]" />
-                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[itemsDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="920,6827.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1" MaxIterations="{x:Null}" Values="{x:Null}">
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[itemsDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="920,9964.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1" MaxIterations="{x:Null}" Values="{x:Null}">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="886.4,6700" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="886.4,9837.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Default="EndeavorBiodomePod" Name="sourceImageKey" />
                               <Variable x:TypeArguments="x:String" Name="productName" />
@@ -245,7 +245,7 @@
                                 </Sequence>
                               </If.Else>
                             </If>
-                            <If Condition="[CurrentRow.Item(&quot;Source Image Uploaded&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="824,5664" sap2010:WorkflowViewState.IdRef="If_3">
+                            <If Condition="[CurrentRow.Item(&quot;Source Image Uploaded&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="824,8801.6" sap2010:WorkflowViewState.IdRef="If_3">
                               <If.Then>
                                 <Sequence sap:VirtualizedContainerService.HintSize="400,115.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -256,7 +256,7 @@
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Sequence sap:VirtualizedContainerService.HintSize="742.4,5383.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                <Sequence sap:VirtualizedContainerService.HintSize="742.4,8520.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -286,7 +286,7 @@
                                       </uix:TargetAnchorable>
                                     </uix:NClick.Target>
                                   </uix:NClick>
-                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="680,4418.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="680,7556" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                                     <TryCatch.Try>
                                       <Sequence sap:VirtualizedContainerService.HintSize="400,607.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                         <sap:WorkflowViewStateService.ViewState>
@@ -330,7 +330,7 @@
                                       </Sequence>
                                     </TryCatch.Try>
                                     <TryCatch.Catches>
-                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="646.4,4244" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="646.4,7381.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -341,7 +341,7 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                           </ActivityAction.Argument>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="640,4173.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                          <Sequence sap:VirtualizedContainerService.HintSize="640,7311.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -369,13 +369,13 @@
                                                 </uix:TargetAnchorable>
                                               </uix:NClick.Target>
                                             </uix:NClick>
-                                            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Use Application: Open" sap:VirtualizedContainerService.HintSize="577.6,3636" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="{x:Null}" IsIncognito="{x:Null}" OpenMode="{x:Null}" OutUiElement="{x:Null}" ScopeGuid="1fc9ec1a-c51c-4c8a-a884-c05fc3dea59c" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}">
+                                            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Use Application: Open" sap:VirtualizedContainerService.HintSize="577.6,6773.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="{x:Null}" IsIncognito="{x:Null}" OpenMode="{x:Null}" OutUiElement="{x:Null}" ScopeGuid="1fc9ec1a-c51c-4c8a-a884-c05fc3dea59c" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}">
                                               <uix:NApplicationCard.Body>
                                                 <ActivityAction x:TypeArguments="x:Object">
                                                   <ActivityAction.Argument>
                                                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                   </ActivityAction.Argument>
-                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="544,3335.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="544,6472.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                                     <Sequence.Variables>
                                                       <Variable x:TypeArguments="x:String" Default="Endeavor - Biodome Pod*" Name="sourceImageNameAsterisk" />
                                                     </Sequence.Variables>
@@ -475,7 +475,7 @@
                                                     </uix:NTypeInto>
                                                     <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayBetweenShortcuts="{x:Null}" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="481.6,188" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" Shortcuts="[d(hk)][k(enter)][u(hk)]" ShortcutsArgument="{x:Null}" Timeout="{x:Null}" Version="V3" />
                                                     <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="481.6,98.4" sap2010:WorkflowViewState.IdRef="Delay_6" />
-                                                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="481.6,316" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                                                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="481.6,3453.6" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                                                       <TryCatch.Try>
                                                         <Sequence sap:VirtualizedContainerService.HintSize="400,3212.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                                           <sap:WorkflowViewStateService.ViewState>
@@ -594,10 +594,10 @@
                                                         </Sequence>
                                                       </TryCatch.Try>
                                                       <TryCatch.Catches>
-                                                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,141.6" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                                                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
@@ -605,14 +605,6 @@
                                                             <ActivityAction.Argument>
                                                               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                                             </ActivityAction.Argument>
-                                                            <Assign sap:VirtualizedContainerService.HintSize="262.4,71.2" sap2010:WorkflowViewState.IdRef="Assign_10">
-                                                              <Assign.To>
-                                                                <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("Source Image Uploaded")]</OutArgument>
-                                                              </Assign.To>
-                                                              <Assign.Value>
-                                                                <InArgument x:TypeArguments="x:Object">["N"]</InArgument>
-                                                              </Assign.Value>
-                                                            </Assign>
                                                           </ActivityAction>
                                                         </Catch>
                                                       </TryCatch.Catches>
