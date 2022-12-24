@@ -1,0 +1,183 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="EbayItemCheckProcess" this:EbayItemCheckProcess.productTitle="Star Citizen - Ship - 400i - LTI Lifetime Insurance - Origin" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="productTitle" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>825.6,1733.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>EbayItemCheckProcess_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="EbayItemCheckProcess" sap:VirtualizedContainerService.HintSize="595.2,1668.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 管理在售物品 - eBay 卖家专区" sap:VirtualizedContainerService.HintSize="532.8,1556.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="f5759814-3a3d-4aa2-b1b9-d6707a1f14fa" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="499.2,1340" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="436.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="f5759814-3a3d-4aa2-b1b9-d6707a1f14fa" Text="[productTitle]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.ebay.com/sh/lst/active?catType=storeCategories&amp;format=ALL_FORMATS&amp;status=ACTIVE&amp;q_field1=title&amp;q_op1=CONTAINS&amp;action=search" DesignTimeRectangle="602, 700, 300, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl aria-label='Search by text' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Search by text' tag='INPUT' type='text' class='textbox__control' aaname='' /&gt;" Guid="b6b8c397-d5e5-47c0-a353-7cdea261145c" ImageBase64="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" InformativeScreenshot="d13dc9936763da919453f1a4fe92f24d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;a24022b1-3eae-46b9-bdaf-d78fca2571f4&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;3dd5bd4f-4b04-4990-96e7-4fe92f0f1c59&amp;quot;}' title='管理在售物品 - eBay 卖家专区' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="310, 700, 199, 50" ElementType="DropDown" FriendlyName="'物品标题'" FullSelectorArgument="&lt;webctrl aria-label='Search by' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Search by' tag='SELECT' type='' class='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMsAAAA2CAYAAABp9230AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARNSURBVHhe7Z3NTSsxFIUj0USyoYmUAGsWtBCJVSQ6QemABRtWoQUKoAaWSNTAwi/HP2Nf+zo4kHHekPNJljI/9iTofL6eYTEzQwhpgrIQ0si3sjw+Pprb21tzeXlpLi4uzGw2Y2M7z+adKIAkEOTm5sY8PT2Z9/d38/X15Y8Scl5UZVmv12a5XJrX11e/h5DzRpUFosznc1YRQhIKWbD0QkWhKIRICllwj8KlFyElQhZUFdzME0JKhCx4PIynXoSQEiELlmB4PEwIKRGy4B+OvLEnREfIgg1CiA5lIaQRykJII5SFkEYoCyGNUBZCGuksy6fZ3i3M6uXTbzveHhZmcbfdHe3H58uq+zXJtPkPZHkzm0UpUB13/qK5bXY9SkpZ2sbd+MFsf+W4HfNtox9LWhiHTIc+snxszcqGtpTFhU4PtI4LdVPYbGhbZTkM2/9BjqyPqVdTMj36yILQ2hDlwXHb2sybNq0S/UgWK61+jUNn+mZZ7DVXZvvht8lk6SKLDVER0F2I0zAP1ScNXX3Z9tvK8tv7JP03xTHt+NpxtEwyMg26yILAu3Cn4c9CP1QfHzQbqLFkcWP8WpY9lSX+BonWj0yDLrKEiiHCjyAnoUnDhc9OEHe+FMMHvbkpsliJdscGWdx1yr5ac0uqQ2SJv0fvRw7j6urKPD8/+60SHLu+vvZbx6OLLDEcWqUAabWofQ5o+ypUKosNMoJ/t9pzP7H/Ojb0GCNvlGV07u/v7d9aEwb7cAznHJsuskTSGTwJaRpqcUN8gBjNYMyV2Twg7BuztaGvL9V+em3KMi6aMGOKArrJImZiERZZbex5w/LIBduJs2+pJJd56jl+zBDWeB3XB1K47xjGSmTJKpT4LVrbjU9ZxicVZmxRQBdZ7ONaGxApBrChEnIkx0WVKftaRJD1c6IYUb64L+BFG4KcVpbse2WkMgSiLFFGQFmOSxBmbFFAt8rikGF2M3Q+Y8fto8uC8XxQC1nsOOFaIJVF+W443/fXZBmwvyGdEMixgSRjiwJOJ4sQYYcPVQinpUGEwypLRO5zYsgZX8oStoexM1nC7IYWrx+/jzsnlZFMjZNWlgEvSrG/kyyuauRBzmUJ57lrpZ/VyhIqSiKg65NNCGQynF4WG3YlbDviuh+MJUtlXEWWtPoN1WQ3xlbI4sarVpGkIpFpcVpZ8qVXmI2HFiQAIYRak7Ko51RlqWC/S23ZBJHcsVAtStnIX+P0laWZSt8jLMMGclkrT620vvl9y3eNck2PzrL8DSAL7zvOD8pCSCOUhZBGKAshjVAWQhqhLIQ0QlkIaUTIwldOEFJHyMKXGRFSR8jC1+QRUkfIwhewElJHyAL4am9CdApZUF2WyyVv9AnJKGQB6/XazOdzCkNIgioLgDCoMFySEeKoygKwJMM9DG768ZQMj5VZbci5sleWAKTBY2WIg39c2k5sbOfYvBOEkG+gLIQ0Ycw/UIreg4xZEXIAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="436.8,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,469.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch.Try>
+                <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="333.6,238.4" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" Timeout="2" Version="V3">
+                  <uix:NMouseScroll.SearchedElement>
+                    <uix:SearchedElement>
+                      <uix:SearchedElement.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.ebay.com/sh/lst/active?catType=storeCategories&amp;format=ALL_FORMATS&amp;status=ACTIVE&amp;q_field1=title&amp;q_op1=CONTAINS&amp;action=search&amp;q_value1=Star%20Citizen%20-%20Ship%20-%20400i%20-%20LTI%20Lifetime%20Insurance%20-%20Origin" DesignTimeRectangle="668, 887, 357, 38" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Star Citizen'" FullSelectorArgument="&lt;webctrl aria-role='grid' tag='TABLE' /&gt;&lt;webctrl aaname='Star Citizen - Ship - 400i - LTI Lifetime Insurance - Origin' tableRow='3' tag='A' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl aria-role='grid' tag='TABLE' /&gt;&lt;webctrl aaname='{0}' type='' tag='A' class='' check:innerText='{0}' /&gt;&quot;, productTitle)]" Guid="4685b54b-5047-4b37-8e87-9495375d146b" ImageBase64="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" InformativeScreenshot="8897e5fa21b9109279d97533ec5e603d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;57098367-60cf-4d8c-a114-a6ace33d6f06&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;3dd5bd4f-4b04-4990-96e7-4fe92f0f1c59&amp;quot;}' title='管理在售物品 - eBay 卖家专区' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                      </uix:SearchedElement.Target>
+                      <uix:SearchedElement.Timeout>
+                        <InArgument x:TypeArguments="x:Double" />
+                      </uix:SearchedElement.Timeout>
+                    </uix:SearchedElement>
+                  </uix:NMouseScroll.SearchedElement>
+                </uix:NMouseScroll>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="G:\My Drive\log.txt" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[productTitle + vbCrLf]" UseDefaultEncoding="False" />
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Up" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="436.8,238.4" sap2010:WorkflowViewState.IdRef="NMouseScroll_2" InteractionMode="HardwareEvents" MovementUnits="10" Version="V3">
+              <uix:NMouseScroll.SearchedElement>
+                <uix:SearchedElement>
+                  <uix:SearchedElement.Target>
+                    <uix:TargetAnchorable BrowserURL="https://www.ebay.com/sh/lst/active?catType=storeCategories&amp;format=ALL_FORMATS&amp;status=ACTIVE&amp;q_field1=title&amp;q_op1=CONTAINS&amp;action=search&amp;q_value1=Star%20Citizen%20-%20Ship%20-%20400i%20-%20LTI%20Lifetime%20Insurance%20-%20Origin" DesignTimeRectangle="602, 542, 300, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'Star Citizen'" FullSelectorArgument="&lt;webctrl aria-label='Search by text' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Search by text' tag='INPUT' type='text' class='textbox__control' aaname='' /&gt;" Guid="525bb13a-8367-4086-9e83-b8e3cde9ff19" ImageBase64="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" InformativeScreenshot="5565652a3812dbae11c2b7fb1c58d959.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;f5571bff-4401-44d8-8645-301a9a28a2a4&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;3dd5bd4f-4b04-4990-96e7-4fe92f0f1c59&amp;quot;}' title='管理在售物品 - eBay 卖家专区' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                  </uix:SearchedElement.Target>
+                  <uix:SearchedElement.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:SearchedElement.Timeout>
+                </uix:SearchedElement>
+              </uix:NMouseScroll.SearchedElement>
+            </uix:NMouseScroll>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACiSURBVDhPY/j//z8GvnHjhlpQUNBaPj6+DyAMYoPEsKnFEAApFBMTe9HR0VH+7t07fhAGsUFi2AxB4YAwyDaQBnRxkBhIDl0chQPCICfv2LHDHV1827ZtHiA5dHEw8dTI4j8MM6RcQsFf1zOB8Zd1ELpthzgck2QADI8aMGoATgOee/g+JtWAyfsNHsMN+HHytDPMEGIMAGm+/+aQ4////xkADNiBBUd/4MwAAAAASUVORK5CYII=" InformativeScreenshot="d3c1b8ccb7b9e8478fca4795897969be.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;5074d020-67fd-4d5d-b058-f7a1551d949b&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;2aee9096-c4cb-40e1-b637-3d6e92f09a82&amp;quot;}' title='管理在售物品 - eBay 卖家专区' /&gt;" Url="https://www.ebay.com/sh/lst/active?catType=storeCategories&amp;format=ALL_FORMATS&amp;status=ACTIVE&amp;q_field1=title&amp;q_op1=CONTAINS&amp;action=search" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
