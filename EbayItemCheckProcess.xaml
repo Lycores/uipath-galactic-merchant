@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>825.6,1733.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>825.6,2160.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EbayItemCheckProcess_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -45,6 +45,7 @@
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.Platform.Triggers</x:String>
       <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -98,24 +99,54 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="EbayItemCheckProcess" sap:VirtualizedContainerService.HintSize="595.2,1668.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="EbayItemCheckProcess" sap:VirtualizedContainerService.HintSize="595.2,2096" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 管理在售物品 - eBay 卖家专区" sap:VirtualizedContainerService.HintSize="532.8,1556.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="f5759814-3a3d-4aa2-b1b9-d6707a1f14fa" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: 管理在售物品 - eBay 卖家专区" sap:VirtualizedContainerService.HintSize="532.8,1984" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="f5759814-3a3d-4aa2-b1b9-d6707a1f14fa" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="499.2,1340" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="499.2,1767.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,388.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+              <TryCatch.Try>
+                <uix:NClick ClickType="Single" DisplayName="Click '搜索'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5759814-3a3d-4aa2-b1b9-d6707a1f14fa" Timeout="2" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://www.ebay.com/sh/lst/active?catType=storeCategories&amp;format=ALL_FORMATS&amp;status=ACTIVE&amp;q_field1=title&amp;q_op1=CONTAINS&amp;action=search" DesignTimeRectangle="350, 509, 40, 33" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'搜索'" FullSelectorArgument="&lt;webctrl parentid='tab1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='tab1' tag='SPAN' type='' class='' aaname='搜索' check:innerText='搜索' /&gt;" Guid="f7dcfece-e70c-40b2-9130-31486f61cad7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAlCAYAAAA5iwvJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGlSURBVFhH7ZWBbYQwDEU7MlNctkC3BmwBU8AUqZPYxDEGEqq0XJUvWWrvjPP8bXJf9sPUgGurAddWA66tBlxb/wF4seOrs917wv91TW/IeY2Q/bsqA15Ha7oAOj4ZeBmM7RwoRD/DByvkIPDEvgvR2/PZRIW6+flOBcBpYW0ldnk0kZ+EOCMCz/3hA8HFG8AXquwwawK+24B3Lj4GuNxhn5M0cy/8e4OqDyxyvGgq7AxVmPd3wOxalE2EZ40dV/zAqQy4tz26EIrB31mRNkbKqWEGeDfm3TwSCWCE9QVEt0KH486Uf55gcZq+qYs1icB4rbku5Upoug3Mr09xxgI/SHKtpLJ2OHHjNE6mwkDNQG3yicrQa2UBeykvQNQU9v3A8auG9ZqBIzYXlA/s5F2SnZNLx2MkOfAEQJiwuyncecKEMmBQWhSdPVsFEL8hDNTdACTwiu8P5Qp3nYqBndIRHzubgCqH015rK8HP4M8W7zAvEoEUhylf1Nnt84kxGwtbCwZM43UhRx5CdcmL9pjiep/vSnH42WrAtdWAa6sB19aHAVv7DTM3qeldqWGEAAAAAElFTkSuQmCC" InformativeScreenshot="ce771b2c17c0aafb6bff0919ca39867a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;4d7fd59f-5bc2-4d54-af7d-1a22ee2dbe0a&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;01f9488b-44d7-449f-9514-3b3ff99bc9d8&amp;quot;}' title='管理在售物品 - eBay 卖家专区' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target DesignTimeRectangle="19, 465, 213, 25" ElementType="ListItem" FriendlyName="'在售当前页面'" FullSelectorArgument="&lt;webctrl class='active' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl class='active' tag='LI' type='' aaname='' check:innerText='在售&amp;#xD;&amp;#xA;当前页面' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANkAAAAdCAYAAAAnx8nUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALxSURBVHhe7Zq9a9tAHIb7b/iv0Bi6BArxprEmQzPV4MHQJXQI2oyhiAzFSzFdTIdiAgUHAu5Q5KEoS8FDIUPBGYo6GG7IIMgg6PBWHyfprCb+kKwi0feBdzmdjtPwcL873RMQQkqFkhFSMpSMkJJJJGs0GkkIIfuDkhFSMpSMkJKhZISUTC0l865NaOFcNZjfZOOWiKtTtDoGzAsb4nfQ4sE+b0F/6o/XmUCEvQjZH5WXzHNduCsRsPqanKuB6TL7PBtPjuRzb6OnRd942LcgZB9xZcjxmjC/isz7mTEI2ZGKSyYw6aTzypcB5uFYLqyzWM4dwxWOFOC/kcy57MoSs4HW+RT2tZ3mw6nse4qR2h7nu/CLSkLyUa9y8XaMbjzPzhiLuP1OwPnpRBFK/zAexMyArnxf85WJ4bthmrMT+ewEhtoeZoy5KydDSA5qdPDhwU72Yk0M5sraspygLec+iGrDFdzP8UoVRXvWQutYiX4gnx1AV9vD9GCxViQFqI1k7hcjKfe0vr1avm2QDK4FQ9OhH0V92h8Xq6vdzJTfbsJS22VYKpIi1EOyXxN05algQzNg3cn2mE2S+Zp4907O/V0bk6UchpAcVF8yVTA/7U+O3zjHQJnvuqTSpYcoXMnIv6TakvllXi/4SazMrX0ZbJCKSbbbnizICDdyFEJ2peIrmYPxi3ReQSLJMqeOP8ZJuWjOlHY/XnirI2CNZBtDyUh+Kl8uOhdtnLwfwpBziyVbYeOeLELMp5he+Zk98C/ssfAfGSlI9fdk4UqUlodFJJu/Tb9x6/C2BylI9SUL2bNkxyamD61aSkavZV9KRgpSQ8mmGGX3TM8Pk39oB3rmmbKfSiR7qdwWeSTWG9mXkpGC1FCyydYni1HiC8KKZLuEkpGC1FAyG9Zf9wvXxULwZy0cJZbsqAvzwb5pjPhUk5KRgtREMhcLuVe6WeY/63Nv5Z5rixPDXfoSso6aSEZIfaFkhJQMJSOkZBLJCCFlAPwBy7wR4SDAcJUAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                </uix:NClick>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="436.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="f5759814-3a3d-4aa2-b1b9-d6707a1f14fa" Text="[productTitle]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.ebay.com/sh/lst/active?catType=storeCategories&amp;format=ALL_FORMATS&amp;status=ACTIVE&amp;q_field1=title&amp;q_op1=CONTAINS&amp;action=search" DesignTimeRectangle="602, 700, 300, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl aria-label='Search by text' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Search by text' tag='INPUT' type='text' class='textbox__control' aaname='' /&gt;" Guid="b6b8c397-d5e5-47c0-a353-7cdea261145c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATAAAAA2CAYAAABA1cVaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAX9SURBVHhe7dxRaxpZGMbxQr5ErvIl8j1ykc+RiyEIRUQINcSLYamUDWUta0JSFpcKlbAW4l5UIlRKmIuERUqWjWWRJaUpBVkkMMiz5x2PcTQzozbN6FmeH5ySmapNL/LnPeOYRyAiMhQDRkTGeqTIH1xcXFxzX0tLS1hZWcH6+jr29vZ0psKFTmDyYkREcXJdF5eXlzg8PMTa2poXs6iQMWBEtLBqtRpWV1exsbGhz4xiwIhooclUtry8HBgxBoyIFp5ETCax8e0kA0ZERpDtpFwT82PAiMgYcmHfP4UxYERkDHl3Um6xGGDAiMgYcouFfxvJgBGRMeRivtzsOsCAEZFR/G1iwIjIKAwYERmLASMiYzFgRGQsBoyIjBVjwLrodPSXYT5Vkd2p4kofhmkd5VD5qA+CfCwjY1dxrQ8naldgP1X/bk8fz8g9LSBz1NJHfleo7mRR/aQPiei7ii1g7ocS0ukCnEHEmup4Kz260glYm4m759UqNfXzVJaqdg71sBh2z1BIZ5DdTqNw3tUnJ3HRfmMjvX+mMjsrF86LJIq3358fA0b0kGKcwFRbzgtIpgo4C6vENBNYz0Fhq4ygeQduGxVbh8sLmY3yX9MmqYvGTwnkTiaNiWNuHOS3y2ijiVJAeBObFhLpu+fTrwKLR0QziDVg4urYDtluKZEB04GQKS2RHIbgeb2/Vew0UVRTV/69b+P4paFip4L27lrNSVP4WkcukUdjhjGsU7Nh18KixwmM6CHFHrChgIklbAvpm1ZarzNqwtIHHhfXp0VkUyokP/jCNljq/O5zNQntFNH4e9J0dYFi0kLmdUhgx/XU41MqeDf6OOD/FDSBDbfDRHQfcwxYgIlbSDXR2GoL2muj/lsTkqP2UUZNYVVcTGhT58+3OFDPiZzEPpaRtiwV0Tyc2yiF65zkYFnq+9HHUF8VRo7vujrOjgWYiL5VLAG7Ptm9nT52T2SLd426mor8U4m3Ii7ie89TgbP3JQ8qFFO8W+nn/tuduI2UGFr7VVR2rIhtoSbTV1rFjgEjmpt4J7DzArLHs2RnVPvI1u/2jQbMH0hv6eticr6/XZNrUdFhUZtTlLf67ya6p3lYT8poRdxWIVvZ7JvKWLAkYAkk/d/L+HpsMWBE38lcA3YnPIFrF/XP8miJ0OB6UhIJPanJZDY61QzjNjw/OWBetFKl/rubPRWzJxbypyEz242DwrYEbnzi4gRGFKe5Bkx+mKMnsrB38UYnMHmdRGoQPBW3mQPWj6N/2+hd34qYwlyvbQwY0TzNPWDW40F4gldic7qA3WcC676X6auIC3+s9BRm/z78fu8KChi3kERx+d9MYN8csK7aDiaTKDgBN399KCK5mUP9qz6+IyhgnMCI4mJQwLpo/+HAqZVx8DKHzKaadOR62Kum9zrftIXsqfO2hWToR4hcNF8mYdnq9QK3kgwY0TzNJ2DdFpxmx/thnn4L2cHZcRUNp4nW5wby957AujjbV3FKHaAZdc9XZOSCAsYtJFFc4g2YU0D62S6yqSyK5/2APeQWcmg8YF00f82oePk+XB5FPleZUhF70cD1yCQWFDBOYERxiTVgzV8SSP+sIqDvTpgYsF4ble2g3zwREbCb0enM02uhtKXD4rbx9keZvPJofPH+djodBwdy4+r2AZzb5w2CNbgxV21fp5jA+tvdEviJIqL7iXcCc92Ru+EDAyYXzuXjPN7W0kbhXVDgggLWQuWZDXsnh1JTb/acIjJPc7DtHA4Gr/NPVT2miMFDZiLx2y/5fpvG5ImLiB5OvAEjIvqOGDAiMhYDRkTGYsCIyFgMGBEZiwEjImMxYERkLAaMiIzkui6Wlpb0EQNGRAa5vLzEysqKPmLAiMggh4eHWF9f10cMGBEZZG1tDXt7e/qIASMiQ9RqtZHto2DAiGjhycX71dXVkelLMGBEtNAkXsvLy9jY2NBnhhgwIlpYsm2UySsoXoIBI6KFIdOW3Coh7zbKBXu55jW+bfRTnXrkxYqLi4tr3ktuUpVoya0SUeEa4JhFRMZiwIjIUMB/05JvoNxnOJAAAAAASUVORK5CYII=" InformativeScreenshot="d13dc9936763da919453f1a4fe92f24d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;a24022b1-3eae-46b9-bdaf-d78fca2571f4&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;3dd5bd4f-4b04-4990-96e7-4fe92f0f1c59&amp;quot;}' title='管理在售物品 - eBay 卖家专区' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
