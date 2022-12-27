@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="WebLoginProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="844,2556" sap2010:WorkflowViewState.IdRef="WebLoginProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="WebLoginProcess" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="825.6,2436.8" sap2010:WorkflowViewState.IdRef="WebLoginProcess_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
       <x:String>System.Activities</x:String>
@@ -102,19 +102,19 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WebLoginProcess" sap:VirtualizedContainerService.HintSize="640,2491.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WebLoginProcess" sap:VirtualizedContainerService.HintSize="660,2372" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Pledge - Roberts Space Industries | Follow the development of Star Citizen and S" sap:VirtualizedContainerService.HintSize="577.6,2368" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Use Browser Chrome: Pledge - Roberts Space Industries | Follow the development of Star Citizen and S" sap:VirtualizedContainerService.HintSize="597.6,2260" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="{x:Null}" InteractionMode="DebuggerApi" IsIncognito="{x:Null}" OpenMode="{x:Null}" OutUiElement="{x:Null}" ScopeGuid="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="544,2141.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="540,2043.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="loggedIn" />
             </Sequence.Variables>
@@ -123,20 +123,20 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckLoginProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="481.6,123.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="CheckLoginProcess.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CheckLoginProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="477.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="CheckLoginProcess.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <OutArgument x:TypeArguments="x:Boolean" x:Key="loggedIn">[loggedIn]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <If Condition="[loggedIn]" sap:VirtualizedContainerService.HintSize="481.6,1853.6" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[loggedIn]" sap:VirtualizedContainerService.HintSize="477.6,1774.4" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,290.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence sap:VirtualizedContainerService.HintSize="400,269.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'Account'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Version="V3">
+                  <uix:NClick AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click 'Account'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" InScope="{x:Null}" InUiElement="{x:Null}" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Timeout="{x:Null}" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://robertsspaceindustries.com/pledge" DesignTimeRectangle="1557, 137, 60, 37" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Account'" FullSelectorArgument="&lt;webctrl aaname='Account' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Account' tag='SPAN' type='' class='c-platform-label c-platform-label--navigation' check:innerText='ACCOUNT' /&gt;" Guid="2dcfed60-8243-42a6-8ffb-3c47a8c217f3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAApCAYAAACFki9MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMcSURBVGhD7VZ/axpBEM13EPKHGEiJIeUkxFqS5oK2IZIqlZoabBAxzTWSo6aaGPPDKyf3Rdt+ltf9faduCrEtFHaFB96b2ZnddzOztwTDf1aA7z9+wmQspdLPYDKsADrSJFgBdKRJsALoSJNgBdCRJsEKoCNNghVAR5qEOQGy1T7CKEJEEfoorSXtG8jVuhg8hNxOEN56cNeFPbMJt9XH3TexntoHDeQywr5WRN0fIZwk7Dc9VApZbnfqGFA+aGNL5SR7ql0z3/GJy563T8XadlH5pNJ5VK4oH6C5Lf/rIeNQzAgQBxkOA+Y8qOWVfXnPw5gGmdzD/3SKVlvgqIgVYpcbjcJrnEkbRfllIjbZ+FWX8Z0v99w/6mGfCv1EASg6e9IvKYCDwpHI7fX5noN+vCe2H75uWoC1Knzm7KH0tsuTXFSRFvZCmycdHu/EaxQ2UfnKN3B+4Mzbn9fRY7FJVcmKSTsoX/KY5+WNhQSIJh62WYUlBYjXPhZTYkqA5X1x6MsaVnINDFkSkoDZ4wM2X8VrYhTRYqXdR1kdMIHd0zh2gs++HzF+/JGI+lQBRCuNW7QV/oIAWye87Nlm1IECNArU/kgChTfo0ESynGftpH3Ypv3qtADJwz1RgF6rzf3ZS/ljAXZQv+UBzl7TEnaw7/NEfA78fwL4hw6pIG6jPd4bUn5RAWT/68DmgGyB8N+1gJwTYRuFx3zIc1KAVIa8uBv+zLGgAKr/ybWkprecoGIOyCF499shSAbaARlos3Z5uIgMwVXJJ4cgrTop4gjvctJnA6WLpM+MANQn3xTzimJBAdSE/xBfEam0i2bAg9I5oK5BUgWDz0IkiqqLZeIvS3X2mmyUNkks2UIE9z10CK+uwYC0jUPzZeF6wkdcpcpn0keF+WgEIMgd8ypZUADZ/yPU89MOhVbye2D+Q4iKMfYOeVlrPoSiSUhEFRUz9yFE1l52UdmND5JapT7XGIcJnytSlQfx94hOgFSGvKwHyi86AwyFFUBHmgQrgI40CVYAHWkSrAA60iRYAXSkSbAC6EiTYAVYf+HCXLj4BRMRonI79VU/AAAAAElFTkSuQmCC" InformativeScreenshot="e88d90006eec877ae7e26271707c30fd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Pledge - Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -150,7 +150,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,1397.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence sap:VirtualizedContainerService.HintSize="400,1326.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="username" />
                     <Variable x:TypeArguments="ss:SecureString" Name="password" />
@@ -160,12 +160,12 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:GetRobotCredential AssetName="sc_main_account" CacheStrategy="None" DisplayName="Get Credential" FolderPath="galacticmerchantofficial@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="337.6,185.6" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[username]">
+                  <ui:GetRobotCredential AssetName="sc_main_account" CacheStrategy="None" DisplayName="Get Credential" FolderPath="galacticmerchantofficial@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="337.6,172" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[username]">
                     <ui:GetRobotCredential.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:GetRobotCredential.TimeoutMS>
                   </ui:GetRobotCredential>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="337.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Text="[username]" Version="V3">
+                  <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Single" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="337.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Text="[username]" Timeout="{x:Null}" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://robertsspaceindustries.com/" DesignTimeRectangle="1536, 507, 326, 46" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT email'" FullSelectorArgument="&lt;webctrl id='email' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='text' class='c-form__input' aaname='Email' /&gt;" Guid="ee5bd619-5948-468b-8f40-d24058045e52" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUoAAAAyCAYAAAA6L5IdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEYSURBVHhe7dcxSsRQFEBRNzMoiIiiRUSnsRC34BrcgKuPiYUzIZHbm1Oc5vN+e3nv4nA3jAD8TSgBwkYon8bD/WT1DvDP/bRv3b9FKC8fXsbr4XW8Pb4D7NLcwLmF5238DeXV43G8eX7b/AiwJ3ML5yauQmmTBDiZm7gM5XSX2yYBTuYmLkM52RoE2DOhBAhCCRCEEiAIJUAQSoAglABBKAGCUAIEoQQIQgkQhBIgCCVAEEqAIJQAQSgBglACBKEECEIJEIQSIAglQBBKgCCUAEEoAYJQAgShBAhCCRCEEiAIJUAQSoAglABBKAGCUAIEoQQIQgkQhBIgCCVAEEqAIJQAQSgBglAChFUoPz6/ADizCiUAW4bxG4qy1LI74/szAAAAAElFTkSuQmCC" InformativeScreenshot="568d6897f013dc7afca37e85e68f5988.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -176,7 +176,7 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="337.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" SecureText="[password]" Version="V3">
+                  <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Single" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="337.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Text="{x:Null}" Timeout="{x:Null}" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://robertsspaceindustries.com/" DesignTimeRectangle="1536, 606, 326, 46" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT password'" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='c-form__input' aaname='Password' /&gt;" Guid="90bff094-be23-45d5-86a7-819ff251bda5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUoAAAAyCAYAAAA6L5IdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJqSURBVHhe7dtBS1RRHMbhvkwQBEULFwZJUERFUG4Uwha5aRZpi3QxubAgKxIEQQiKoFat+ozH3omxO3eunhxdzOCzeBiZ/726+3HuPcdLl2/MFwCOJ5QAFUIJUDESyitzC+Xq/J1y7db9cn3hAcCFkvalgWlhs41HocxAIAH+BrMZy6NQpqJdNwBcRGniWCitJgH+SRPHQtl1IcBFJpQAFUIJUCGUABVCCVAhlAAVQglQIZQAFUIJUCGUABVCCVAhlAAVQglQIZTAzJm7+7gsPl8va9t75fXOQfn8/Xfp734d/Lz8YrPcfLjUed+khBKYGQnkytpWef/l1yCOJ+n1P55bMIUSmAn3llbL9v6PkRj2d7+VxdVXg9mjlV5Zf7s3Mk9QM+/6fachlMDUW+5tjgQwem8+Hc1vP1k5+do/q8vhfBJCCUy1BLEdvu39n4NZVpHNx/Dh6rG9soyzxFIogan1bH1rLHixuvFuMM+jd3uW7xPM9vcxaSyFEphaO8ds2iSgmXfN8n3eWXbNIhtCzb/xP4QSmFp599gVu+H7yfYj9vCR/LiV6KQbO0IJTLWsDtsry7yXzNGfSCzzCJ7PhDUrxvbueJxl91sogamXALZjmQPm7XOSiWQOoTevy33Z9Gled1pCCcyERLDrnGTCmEPo2ahpH0Tf+HBwLofOhRKYKXkUTwCbQWzLPNd13T8JoQRmUlaYee+YjZts7uQzh83P698Wm4QSoEIoASqEEqBCKAEqhBKgQigBKoQSoEIoASqEEqBCKAEqhBKgQigBKoQSoEIoASqEEqBiLJRPX/YBaBgLJQBd5ssh8Q16CpxlWcAAAAAASUVORK5CYII=" InformativeScreenshot="c9e2f4b2849829103d525d42d5776110.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -187,7 +187,7 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Version="V3">
+                  <uix:NClick AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" InScope="{x:Null}" InUiElement="{x:Null}" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Timeout="{x:Null}" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://robertsspaceindustries.com/" DesignTimeRectangle="1536, 675, 30, 30" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl id='remember' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='remember' tag='INPUT' type='checkbox' class='c-form__input' aaname='Remember me' /&gt;" Guid="64b1ac62-4995-406f-949e-4e3b312203a7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACtSURBVFhH7ZehDsJAEAX7M+hSWQEBQwIoXNMEiyB4wtcvGUFzfa3dcOKJUb3bmfTUNpuujxpwiDIL2e5OcRkfMTzfMb4+KTAbB67SPYXwgUPH2z26wzXa/TkFZuPAVcZMIVRyYO1yBrhwLkIozPwTCi6cixDeb+1CJjgdUuIQxSGKQxSHKA5RHKI4RHGI4hCl7pBq1olqFqxqVs5fDJUc4v0yYDaOMgJmIf+jjy9BTMfeCXkCMwAAAABJRU5ErkJggg==" InformativeScreenshot="7b1e7c43e06e2134134c4815a1a243b2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -198,7 +198,7 @@
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'Sign In'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Version="V3">
+                  <uix:NClick AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click 'Sign In'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" InScope="{x:Null}" InUiElement="{x:Null}" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="1439e583-b82b-4f5b-a80c-de3c4df5c0e0" Timeout="{x:Null}" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://robertsspaceindustries.com/" DesignTimeRectangle="1709, 731, 180, 56" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Sign In'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='c-form__submit-button animate' aaname='Sign In' check:innerText='SIGN IN' /&gt;" Guid="0cbcdb14-a061-48b0-8614-5817e015749f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALgAAAA8CAYAAADVEnAJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARtSURBVHhe7dzPSxRhHMfx/hErrC4RRT8uLkTQyYpOQUJBP6CCwKBAg0i6eLFudRCUDkEH6bQQ1UU6SL8kFjyohaz0S2Now1h1GUZUvj3z45mdZ+dZdXefVec7n4EXtDOPz3PYt9OzuuuOfYfbCICTC533wn8jcGBn6wI/kvHprgEYsmmB7820U+uZq7T7fBftuvaQdt5+Si1dzwGaTjZoPvCjx6n17HVqQcywhWSPRgPfc/Ic7ezs1y4IsJlkk8YCbz19RbsQwFaQXRoJfPfF+9pFALaKbLPhwBE3bEeyz4YCR9ywXclG6w4cccN2JjutK3DEDdudbLXmwBE3JIHstabAETckhWx2w4EjbkgS2e2GAkfckDSy3XUDR9yQRLLfNQNH3JBUsuGqgSNuSDLZsTZwvHEKkk62HAvcfcur7gsAkkT2rAZ+9Djezw0saAP3PomjGQyQNNrA8TEz4CIWuPsBYd1AgCSKBe5++l03ECCJYoG7f9pBNxAgiWKBu3+3RDcQIInUwI9kUvBHebLUk5ujgr1CsWN1hRynQM8i43unl7xL81OfI3P489wamaV8SXzNqjdEPZaLlH0Wn4dWbXr7MjpPxOeiP8bK66+H8pT3BhZpKHLe7Bo8xALXDeIkMzJHjv8U03yxSHmrwsx36o2MrxZ4x2gxnIdsOz6PZdHAYHwe7yhZyhohU4G7R8Nr8KAGLugGcTLw239+C5OftNcr6QP/RG8XvNNUmMpRJjK+GiU+ccxP5+LjTAYujsbW4CF1gQ/98Z/f/Kj+eiVt4IM/6Zd7clUE1qeOr0bO4yzYwZ1/iT5UbiMMBW5mDR5SF7i8gzvfxrTXK2kDf2XRvHtyYZZ6ImPXUp5njIasYP9vV2wjDAVuZg0eUhd45v2c/wSLw1mYozfD79bcYmgDryMSZZ5BEeiy91DdRhgL3MQaPKQu8Jau1/To66L6k49lmybGx+mWZrvRlMDF4/KL1Mg2wmTg4nFja/CQwsADfcPUO2pRvuQ/3/6xQr8m1ReNdQWeLW9huoNz8XmG49sIw4E3tgYP6Q08ov3FOL2x/DjcY2KkfK2uwF8GgZescI+unadyG2E8cKHuNXhA4KEsPfnh3+2cmS/heW008kVm8SfdkOeiNhq4oGwjppsQuFDfGjwg8CjN3U0bzdAsFbyzamChGgJ3v7EGfgfbCHkYDry+NXhA4BHdX23vuV/3Dt6Vow/+UHFe88uUmgIX+r7QRLCN8A7jgQs1r8FDygIfpoGpyl+pB/75cbgvNCdGsuHXVIvmsrjb+//ti6O0qM71N5hro4EL0bcQNCVwobY1eEhZ4OU7b+xw32hl25T7qP5cvHo0a7/ZynGWlJ/IrBefso1oUuC1rcFDygKHtEHgwBoCB9YQOLCGwIE1BA6sIXBgDYEDawgcWEPgwBoCB9YQOLCGwIE1BA5s7e98jMCBr2OX7iJw4OnA1Qd06MTpcuAdN7vJpRsMkBQH7/RT27UeEfepMG4v8OgDAF7a6D8gkaNdjOyw9wAAAABJRU5ErkJggg==" InformativeScreenshot="c9e917b4f1e9e0361d5c1b2bc27e3666.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Roberts Space Industries | Follow the development of Star Citizen and Squadron 42' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -209,7 +209,7 @@
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="337.6,98.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="337.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
                 </Sequence>
               </If.Else>
             </If>
