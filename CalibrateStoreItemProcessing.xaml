@@ -397,7 +397,7 @@
                                           <OutArgument x:TypeArguments="x:String">[SHproductTitle]</OutArgument>
                                         </Assign.To>
                                         <Assign.Value>
-                                          <InArgument x:TypeArguments="x:String">[productType.ToUpper + " - " + insurance + " - " + manufacturer + " - " + sourceImageName + " CCU*"]</InArgument>
+                                          <InArgument x:TypeArguments="x:String">[productType.ToUpper + " - " + insurance + " - " + manufacturer + " - " + sourceImageName + " CCU'd"]</InArgument>
                                         </Assign.Value>
                                       </Assign>
                                     </Sequence>
@@ -481,7 +481,9 @@
                                       </If>
                                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SpaceFoundryItemCheckProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="573.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SpaceFoundryItemCheckProcess.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
-                                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                          <InArgument x:TypeArguments="x:String" x:Key="productTitle">
+                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="SFproductTitle" />
+                                          </InArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
                                       </ui:InvokeWorkflowFile>
                                     </Sequence>

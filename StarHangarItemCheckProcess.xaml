@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="StarHangarItemCheckProcess" this:StarHangarItemCheckProcess.productTitle="VEHICLE - LTI - Anvil - Centurion CCU*" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="StarHangarItemCheckProcess" this:StarHangarItemCheckProcess.productTitle="VEHICLE - LTI - Anvil - Centurion CCU*" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="sourceImageName" Type="InArgument(x:String)" />
     <x:Property Name="productTitle" Type="InArgument(x:String)" />
@@ -6,10 +6,10 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>825.6,1340</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>825.6,1495.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>StarHangarItemCheckProcess_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="38">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -48,10 +48,10 @@
       <x:String>UiPath.CV</x:String>
       <x:String>UiPath.Shared.ObjectLibrary</x:String>
       <x:String>UiPath.CV.Activities</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="96">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="52">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -105,25 +105,41 @@
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="StarHangarItemCheckProcess" sap:VirtualizedContainerService.HintSize="595.2,1275.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="StarHangarItemCheckProcess" sap:VirtualizedContainerService.HintSize="595.2,1430.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="searchQuery" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Marketplace Product List" sap:VirtualizedContainerService.HintSize="532.8,1163.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="883f604c-b6ab-4536-a4dc-18975ab87213" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Marketplace Product List" sap:VirtualizedContainerService.HintSize="532.8,1318.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="883f604c-b6ab-4536-a4dc-18975ab87213" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="499.2,946.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="499.2,1101.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="searchQuery" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="436.8,82.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[&quot;https://star-hangar.com/marketplace/product/productlist/?availability=&amp;from_date=&amp;from_quantity=&amp;limit=50&amp;ptype=&amp;s=&quot; + sourceImageName + &quot;&amp;status=&amp;to_date=&amp;to_quantity=&quot;]" Version="V3" />
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ReplaceQuotesAndApostropheProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="436.8,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ReplaceQuotesAndApostropheProcess.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="valueIn">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="productTitle" />
+                </InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="valueOut">
+                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="searchQuery" />
+                </OutArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,710.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
                 <Sequence sap:VirtualizedContainerService.HintSize="400,479.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
@@ -136,7 +152,7 @@
                     <uix:NMouseScroll.SearchedElement>
                       <uix:SearchedElement>
                         <uix:SearchedElement.Target>
-                          <uix:TargetAnchorable BrowserURL="https://star-hangar.com/marketplace/product/productlist/?s=centurion&amp;from_date=&amp;to_date=&amp;status=&amp;ptype=&amp;from_quantity=&amp;to_quantity=&amp;availability=" DesignTimeRectangle="761, 179, 139, 51" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'VEHICLE -'" FullSelectorArgument="&lt;webctrl parentid='form-productlist-massdelete' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='A' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl parentid='form-productlist-massdelete' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='                                                                                                                 VEHICLE - LTI - Anvil - Centurion CCU&amp;apos;d                                                                                                            ' check:innerText='{0}' /&gt;&quot;, productTitle)]" Guid="2b619667-c4ee-4b4c-ba06-78bff37c5278" ImageBase64="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" InformativeScreenshot="7e56d2aa49a987e416398a4542a52c07.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='28896278' title='Marketplace Product List' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                          <uix:TargetAnchorable BrowserURL="https://star-hangar.com/marketplace/product/productlist/?s=centurion&amp;from_date=&amp;to_date=&amp;status=&amp;ptype=&amp;from_quantity=&amp;to_quantity=&amp;availability=" DesignTimeRectangle="761, 179, 139, 51" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'VEHICLE -'" FullSelectorArgument="&lt;webctrl parentid='form-productlist-massdelete' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='A' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl parentid='form-productlist-massdelete' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' check:innerText='{0}' /&gt;&quot;, searchQuery)]" Guid="2b619667-c4ee-4b4c-ba06-78bff37c5278" ImageBase64="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" InformativeScreenshot="2793aa9a444b03b06c9ac206b83c9262.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='28896278' title='Marketplace Product List' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
                         </uix:SearchedElement.Target>
                         <uix:SearchedElement.Timeout>
                           <InArgument x:TypeArguments="x:Double" />
