@@ -1,6 +1,6 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="825.6,456" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="96">
+    <scg:List x:TypeArguments="x:String" Capacity="58">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -746,7 +746,7 @@
                                                             <av:Size x:Key="ShapeSize">200,83.2</av:Size>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <Sequence sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                                        <Sequence sap:VirtualizedContainerService.HintSize="976,4647.2" sap2010:WorkflowViewState.IdRef="Sequence_45">
                                                           <Sequence.Variables>
                                                             <Variable x:TypeArguments="x:String" Name="tablePath" />
                                                             <Variable x:TypeArguments="sd:DataTable" Name="itemsDataTable" />
@@ -762,7 +762,7 @@
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <ui:GetRobotAsset AssetName="Google_API_ClientID" CacheStrategy="None" DisplayName="Get Asset" FolderPath="galacticmerchantofficial@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="913.6,357.6" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+                                                          <ui:GetRobotAsset AssetName="Google_API_ClientID" CacheStrategy="None" DisplayName="Get Asset" FolderPath="galacticmerchantofficial@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="913.6,324" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
                                                             <ui:GetRobotAsset.TimeoutMS>
                                                               <InArgument x:TypeArguments="x:Int32" />
                                                             </ui:GetRobotAsset.TimeoutMS>
@@ -778,7 +778,7 @@
                                                               <OutArgument x:TypeArguments="x:String">[clientSecret]</OutArgument>
                                                             </ui:GetRobotAsset.Value>
                                                           </ui:GetRobotAsset>
-                                                          <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" KeyPath="{x:Null}" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" TimeoutMS="{x:Null}" UserEmail="{x:Null}" AuthenticationType="OAuthClientID" CredentialID="[clientID]" CredentialSecret="[clientSecret]" DataStoreLocation="Local disk" DisplayName="GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="913.6,3540" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyType="JSON" OAuthClient="UiPath" Password="notasecret" Services="Unselected">
+                                                          <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" KeyPath="{x:Null}" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" TimeoutMS="{x:Null}" UserEmail="{x:Null}" AuthenticationType="OAuthClientID" CredentialID="[clientID]" CredentialSecret="[clientSecret]" DataStoreLocation="Local disk" DisplayName="GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="913.6,3503.2" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyType="JSON" OAuthClient="UiPath" Password="notasecret" Services="Unselected">
                                                             <uga:GSuiteApplicationScope.AuthenticationScopes>
                                                               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                                                 <InArgument x:TypeArguments="x:String">https://www.googleapis.com/auth/drive</InArgument>
@@ -789,14 +789,14 @@
                                                                 <ActivityAction.Argument>
                                                                   <DelegateInArgument x:TypeArguments="ug:SimpleObjectContainer" Name="GSuiteScope" />
                                                                 </ActivityAction.Argument>
-                                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="880,3418.4" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="880,3391.2" sap2010:WorkflowViewState.IdRef="Sequence_58">
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                  <uga:FindFiles ContinueOnError="{x:Null}" DriveTarget="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" FirstResultId="[fileID]" sap:VirtualizedContainerService.HintSize="817.6,90.4" sap2010:WorkflowViewState.IdRef="FindFiles_1" MaxResults="50" SearchExpression="name = 'StarCitizen'" SupportsTeamDrives="False" />
-                                                                  <uga:ReadRange ContinueOnError="{x:Null}" GoogleSpreadsheet="{x:Null}" Range="{x:Null}" AuthScopesInvalid="False" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="817.6,223.2" sap2010:WorkflowViewState.IdRef="ReadRange_1" IncludeHeaders="True" Result="[itemsDataTable]" SheetName="Items" SpreadsheetId="[fileID]" />
+                                                                  <uga:FindFiles ContinueOnError="{x:Null}" DriveTarget="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" FirstResultId="[fileID]" sap:VirtualizedContainerService.HintSize="817.6,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_1" MaxResults="50" SearchExpression="name = 'StarCitizen'" SupportsTeamDrives="False" />
+                                                                  <uga:ReadRange ContinueOnError="{x:Null}" GoogleSpreadsheet="{x:Null}" Range="{x:Null}" AuthScopesInvalid="False" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,216" sap2010:WorkflowViewState.IdRef="ReadRange_1" IncludeHeaders="True" Result="[itemsDataTable]" SheetName="Items" SpreadsheetId="[fileID]" />
                                                                   <Assign sap:VirtualizedContainerService.HintSize="817.6,69.6" sap2010:WorkflowViewState.IdRef="Assign_23">
                                                                     <Assign.To>
                                                                       <OutArgument x:TypeArguments="x:String">[imageFolderPath]</OutArgument>
@@ -1154,10 +1154,7 @@
                                                                               </scg:Dictionary>
                                                                             </sap:WorkflowViewStateService.ViewState>
                                                                             <FlowDecision.False>
-                                                                              <FlowDecision x:Name="__ReferenceID33" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_18">
-                                                                                <FlowDecision.Condition>
-                                                                                  <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="choice=&quot;升级包列表生成&quot;" />
-                                                                                </FlowDecision.Condition>
+                                                                              <FlowDecision x:Name="__ReferenceID33" Condition="[choice=&quot;升级包列表生成&quot;]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_18">
                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1174,15 +1171,62 @@
                                                                                         <av:Size x:Key="ShapeSize">200,83.2</av:Size>
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                                    <Sequence sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                                                                                    <Sequence sap:VirtualizedContainerService.HintSize="636,1112.8" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                                                                                      <Sequence.Variables>
+                                                                                        <Variable x:TypeArguments="x:String" Name="distance" />
+                                                                                        <Variable x:TypeArguments="x:Int32" Name="upgradePrice" />
+                                                                                      </Sequence.Variables>
                                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                         </scg:Dictionary>
                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CalibrateStoreItemProcessing.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_27" UnSafe="False" WorkflowFileName="CalibrateStoreItemProcessing.xaml">
+                                                                                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="573.6,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_33" IsPassword="False" Label="what is the max upgrade price(default is genearing all)" Title="what is the max upgrade Price">
+                                                                                        <ui:InputDialog.Result>
+                                                                                          <OutArgument x:TypeArguments="x:String">[distance]</OutArgument>
+                                                                                        </ui:InputDialog.Result>
+                                                                                      </ui:InputDialog>
+                                                                                      <If Condition="[distance = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="573.6,565.6" sap2010:WorkflowViewState.IdRef="If_8">
+                                                                                        <If.Then>
+                                                                                          <Sequence sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                              </scg:Dictionary>
+                                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                                            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_24">
+                                                                                              <Assign.To>
+                                                                                                <OutArgument x:TypeArguments="x:Int32">[upgradePrice]</OutArgument>
+                                                                                              </Assign.To>
+                                                                                              <Assign.Value>
+                                                                                                <InArgument x:TypeArguments="x:Int32">[Integer.Parse("9999")]</InArgument>
+                                                                                              </Assign.Value>
+                                                                                            </Assign>
+                                                                                          </Sequence>
+                                                                                        </If.Then>
+                                                                                        <If.Else>
+                                                                                          <Sequence sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                              </scg:Dictionary>
+                                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                                            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_25">
+                                                                                              <Assign.To>
+                                                                                                <OutArgument x:TypeArguments="x:Int32">[upgradePrice]</OutArgument>
+                                                                                              </Assign.To>
+                                                                                              <Assign.Value>
+                                                                                                <InArgument x:TypeArguments="x:Int32">[Integer.Parse(distance)]</InArgument>
+                                                                                              </Assign.Value>
+                                                                                            </Assign>
+                                                                                          </Sequence>
+                                                                                        </If.Else>
+                                                                                      </If>
+                                                                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GenerateUpgradeProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="573.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_28" UnSafe="False" WorkflowFileName="GenerateUpgradeProcess.xaml">
                                                                                         <ui:InvokeWorkflowFile.Arguments>
-                                                                                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                                                                          <InArgument x:TypeArguments="x:Int32" x:Key="upgradePrice">
+                                                                                            <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="upgradePrice" />
+                                                                                          </InArgument>
                                                                                         </ui:InvokeWorkflowFile.Arguments>
                                                                                       </ui:InvokeWorkflowFile>
                                                                                     </Sequence>
