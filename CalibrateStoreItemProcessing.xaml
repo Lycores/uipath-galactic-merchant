@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CalibrateStoreItemProcessing" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1237.6,8236" sap2010:WorkflowViewState.IdRef="CalibrateStoreItemProcessing_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CalibrateStoreItemProcessing" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1237.6,8445.6" sap2010:WorkflowViewState.IdRef="CalibrateStoreItemProcessing_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
       <x:String>System.Activities</x:String>
@@ -107,22 +107,27 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CalibrateStoreItemProcessing" sap:VirtualizedContainerService.HintSize="1248,8171.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CalibrateStoreItemProcessing" sap:VirtualizedContainerService.HintSize="1248,8380.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="clientID" />
       <Variable x:TypeArguments="x:String" Name="clientSecret" />
       <Variable x:TypeArguments="x:String" Name="selectedStore" />
       <Variable x:TypeArguments="x:String" Name="result" />
+      <Variable x:TypeArguments="x:String" Name="forceUpdate" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1185.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;we check the alias on SHIP, VEHICLE and BIKE&quot;]" />
-    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="1185.6,295.2" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Which store do you want to calibrate item" OptionsString="Ebay;Star-Hangar;Space-Foundry" Title="Which store do you want to calibrate item">
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="1185.6,295.2" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Which store do you want to calibrate item" OptionsString="Ebay;Star-Hangar;Space-Foundry" Title="Which store do you want to calibrate item">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[selectedStore]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="1185.6,295.2" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="强制更新？" OptionsString="Yes;No" Title="强制更新？">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[forceUpdate]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
     <ui:GetRobotAsset AssetName="Google_API_ClientID" CacheStrategy="None" DisplayName="Get Asset" FolderPath="galacticmerchantofficial@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="1185.6,324" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
@@ -141,7 +146,7 @@
         <OutArgument x:TypeArguments="x:String">[clientSecret]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" KeyPath="{x:Null}" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" TimeoutMS="{x:Null}" UserEmail="{x:Null}" AuthenticationType="OAuthClientID" CredentialID="[clientID]" CredentialSecret="[clientSecret]" DataStoreLocation="Local disk" DisplayName="GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="1185.6,6870.4" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyType="JSON" OAuthClient="UiPath" Password="notasecret" Services="Unselected">
+    <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" AuthenticationType="OAuthClientID" ContinueOnError="{x:Null}" CredentialID="[clientID]" CredentialSecret="[clientSecret]" DataStoreLocation="Local disk" DisplayName="GSuite Application Scope" Folder="{x:Null}" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="1185.6,6870.4" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyPath="{x:Null}" KeyType="JSON" OAuthClient="UiPath" Password="notasecret" SecureCredentialSecret="{x:Null}" ServiceAccountEmail="{x:Null}" Services="Unselected" TimeoutMS="{x:Null}" User="{x:Null}" UserEmail="{x:Null}">
       <uga:GSuiteApplicationScope.AuthenticationScopes>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
           <InArgument x:TypeArguments="x:String">https://www.googleapis.com/auth/drive</InArgument>
@@ -163,17 +168,20 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uga:FindFiles ContinueOnError="{x:Null}" DriveTarget="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" DisplayName="Find Files and Folders" FirstResultId="[fileID]" sap:VirtualizedContainerService.HintSize="1089.6,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_1" MaxResults="50" SearchExpression="name = 'StarCitizen'" SupportsTeamDrives="False" />
-            <uga:ReadRange ContinueOnError="{x:Null}" GoogleSpreadsheet="{x:Null}" Range="{x:Null}" AuthScopesInvalid="False" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1089.6,216" sap2010:WorkflowViewState.IdRef="ReadRange_1" IncludeHeaders="True" Result="[aliasTable]" SheetName="Alias" SpreadsheetId="[fileID]" />
-            <uga:ReadRange ContinueOnError="{x:Null}" GoogleSpreadsheet="{x:Null}" Range="{x:Null}" AuthScopesInvalid="False" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1089.6,216" sap2010:WorkflowViewState.IdRef="ReadRange_2" IncludeHeaders="True" Result="[itemsDataTable]" SheetName="Items" SpreadsheetId="[fileID]" />
-            <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="G:\My Drive\log.txt" sap:VirtualizedContainerService.HintSize="1089.6,134.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_2">
+            <uga:FindFiles DriveTarget="{x:Null}" AuthScopesInvalid="False" ContinueOnError="{x:Null}" DisplayName="Find Files and Folders" FirstResultId="[fileID]" sap:VirtualizedContainerService.HintSize="1089.6,81.6" sap2010:WorkflowViewState.IdRef="FindFiles_1" MaxResults="50" Result="{x:Null}" SearchExpression="name = 'StarCitizen'" SupportsTeamDrives="False" />
+            <uga:ReadRange AuthScopesInvalid="False" ContinueOnError="{x:Null}" DisplayName="Read Range" GoogleSpreadsheet="{x:Null}" sap:VirtualizedContainerService.HintSize="1089.6,216" sap2010:WorkflowViewState.IdRef="ReadRange_1" IncludeHeaders="True" Range="{x:Null}" Result="[aliasTable]" SheetName="Alias" SpreadsheetId="[fileID]" />
+            <uga:ReadRange AuthScopesInvalid="False" ContinueOnError="{x:Null}" DisplayName="Read Range" GoogleSpreadsheet="{x:Null}" sap:VirtualizedContainerService.HintSize="1089.6,216" sap2010:WorkflowViewState.IdRef="ReadRange_2" IncludeHeaders="True" Range="{x:Null}" Result="[itemsDataTable]" SheetName="Items" SpreadsheetId="[fileID]" />
+            <ui:WriteTextFile ContinueOnError="{x:Null}" DisplayName="Write Text File" Encoding="{x:Null}" File="{x:Null}" FileName="G:\My Drive\log.txt" sap:VirtualizedContainerService.HintSize="1089.6,134.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_2">
               <ui:WriteTextFile.Text>
                 <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String" Value="" />
+                  <Literal x:TypeArguments="x:String">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="x:String" />
+                    </Literal.Result></Literal>
                 </InArgument>
               </ui:WriteTextFile.Text>
             </ui:WriteTextFile>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[itemsDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1089.6,5838.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[itemsDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1089.6,5838.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1" MaxIterations="{x:Null}" Values="{x:Null}">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
@@ -244,7 +252,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AliasingProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="AliasingProcess.xaml">
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AliasingProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="337.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="AliasingProcess.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InOutArgument x:TypeArguments="x:String" x:Key="sourceImageName">[sourceImageName]</InOutArgument>
                               <InArgument x:TypeArguments="sd:DataTable" x:Key="aliasTable">[aliasTable]</InArgument>
@@ -362,9 +370,10 @@
                               </Sequence>
                             </If.Else>
                           </If>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="EbayItemCheckProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="713.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="EbayItemCheckProcess.xaml">
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="EbayItemCheckProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="713.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="EbayItemCheckProcess.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="x:String" x:Key="productTitle">[EBAYproductTitle]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="forceUpdate">[forceUpdate]</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
                         </Sequence>
@@ -420,10 +429,11 @@
                                     </Sequence>
                                   </If.Else>
                                 </If>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="StarHangarItemCheckProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="573.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="StarHangarItemCheckProcess.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="StarHangarItemCheckProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="573.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="StarHangarItemCheckProcess.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="productTitle">[SHproductTitle]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="sourceImageName">[sourceImageName]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="forceUpdate">[forceUpdate]</InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
                               </Sequence>
@@ -479,11 +489,10 @@
                                           </Sequence>
                                         </If.Else>
                                       </If>
-                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SpaceFoundryItemCheckProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="573.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SpaceFoundryItemCheckProcess.xaml">
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SpaceFoundryItemCheckProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="573.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="SpaceFoundryItemCheckProcess.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
-                                          <InArgument x:TypeArguments="x:String" x:Key="productTitle">
-                                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="SFproductTitle" />
-                                          </InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="productTitle">[SFproductTitle]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="forceUpdate">[forceUpdate]</InArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
                                       </ui:InvokeWorkflowFile>
                                     </Sequence>
@@ -495,7 +504,7 @@
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="337.6,120" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_2" Reason="store name is not pre-defined value" />
+                                      <TerminateWorkflow DisplayName="Terminate Workflow" Exception="{x:Null}" sap:VirtualizedContainerService.HintSize="337.6,120" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_2" Reason="store name is not pre-defined value" />
                                     </Sequence>
                                   </If.Else>
                                 </If>

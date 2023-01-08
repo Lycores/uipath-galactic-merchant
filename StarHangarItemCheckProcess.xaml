@@ -2,11 +2,12 @@
   <x:Members>
     <x:Property Name="sourceImageName" Type="InArgument(x:String)" />
     <x:Property Name="productTitle" Type="InArgument(x:String)" />
+    <x:Property Name="forceUpdate" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>825.6,1495.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>846.4,1369.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>StarHangarItemCheckProcess_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="38">
@@ -105,7 +106,7 @@
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="StarHangarItemCheckProcess" sap:VirtualizedContainerService.HintSize="595.2,1430.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="StarHangarItemCheckProcess" sap:VirtualizedContainerService.HintSize="595.2,1304.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="searchQuery" />
     </Sequence.Variables>
@@ -114,13 +115,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Marketplace Product List" sap:VirtualizedContainerService.HintSize="532.8,1318.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="883f604c-b6ab-4536-a4dc-18975ab87213" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Marketplace Product List" sap:VirtualizedContainerService.HintSize="532.8,1192.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="883f604c-b6ab-4536-a4dc-18975ab87213" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="499.2,1101.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="499.2,976" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="searchQuery" />
             </Sequence.Variables>
@@ -132,17 +133,13 @@
             <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="436.8,82.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[&quot;https://star-hangar.com/marketplace/product/productlist/?availability=&amp;from_date=&amp;from_quantity=&amp;limit=50&amp;ptype=&amp;s=&quot; + sourceImageName + &quot;&amp;status=&amp;to_date=&amp;to_quantity=&quot;]" Version="V3" />
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ReplaceQuotesAndApostropheProcess.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="436.8,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ReplaceQuotesAndApostropheProcess.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="valueIn">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="productTitle" />
-                </InArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="valueOut">
-                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="searchQuery" />
-                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="valueIn">[productTitle]</InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="valueOut">[searchQuery]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,710.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,584.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,479.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence sap:VirtualizedContainerService.HintSize="400,353.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -160,7 +157,6 @@
                       </uix:SearchedElement>
                     </uix:NMouseScroll.SearchedElement>
                   </uix:NMouseScroll>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="337.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Yes&quot;]" />
                 </Sequence>
               </TryCatch.Try>
               <TryCatch.Catches>
